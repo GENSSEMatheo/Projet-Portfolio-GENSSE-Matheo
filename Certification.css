@@ -1,0 +1,425 @@
+/*----------------------------------------------*/
+/*--Page de CERTIFICATIONS du portfolio (CSS)--*/
+/*----------------------------------------------*/
+
+/*Corps de la page et fond principal*/
+body {
+    font-family: 'Montserrat', sans-serif;
+    /*↳ On initialise les polices d'écriture*/
+    color: #fff;
+    /*↳ On initialise la couleur d'écriture*/
+    background: url('fondnoir.webp') no-repeat center center fixed;
+    /*↳ On initialise le fond d'écran de la page*/
+    background-size: cover;
+    /*↳ On fait en sorte que le fond d'écran recouvre la totalité de la page*/
+    margin: 0;
+    /*↳ On fait en sorte que la page couvre tout l'écran*/
+}
+
+/*----------*/
+/*--NAVBAR--*/
+/*----------*/
+/*Navbar de menu paramètres globaux*/
+nav {
+    display: flex;
+    /*↳ On rend la barre de menu flexible et maniable*/
+    justify-content: center;
+    /*↳ On centre les éléments enfants présents dans la navbar (liste ul)*/
+    background-color: rgb(0, 0, 0);
+    /*↳ On met un fond noir à la navbar*/
+    position: fixed;
+    /*↳ On fixe la navbar pour pouvoir dérouler la page sans qu'elle ne bouge*/
+    width: 100vw;
+    /*↳ On couvre toute la largeur (horizontal) de la page avec la navbar*/
+    top: 0;
+    /*↳ On positionne la navbar au plus haut possible*/
+    z-index: 1;
+    /*↳ On positionne la navbar au premier plan*/
+    border-bottom: white double;
+    /*↳ On met une bordure inférieure double à la navbar*/
+}
+
+/*Navbar de menu ensemble de la liste interne (ul)*/
+nav ul {
+    display: flex;
+    /*↳ On rend la liste de menu flexible et maniable*/
+    list-style: none;
+    /*↳ On retire les puces des éléments de la liste*/
+    flex-wrap: wrap;
+    /*↳ On fait en sorte que s'il n'y a plus de place, les éléments sautent une ligne*/
+    padding-left: 0;
+    /*↳ On retire l'indentation automatique de la liste*/
+    justify-content: center;
+    /*↳ On centre les éléments de la liste dans la liste elle-même (ul) (Utile pour responsive)*/
+}
+
+/*Navbar de menu texte interne (liens vers autres pages)*/
+nav ul li a {
+    color: white;
+    /*↳ On change la couleur des textes (liens) en blanc pour éviter la configuration automatique de couleur des liens*/
+    text-decoration: none;
+    /*↳ On retire le soulignage*/
+    font-weight: bold;
+    /*↳ On met les liens en gras*/
+    padding-inline: 1.5vw;
+    /*↳ On met un écart horizontal entre les éléments*/
+    transition: all 0.3s ease-in-out;
+    /*↳ On paramètre l'animation et le temps d'exécution de celle-ci lors du survol des éléments*/
+}
+
+/*Navbar de menu lors du survol des éléments (liens) avec la souris*/
+nav ul li a:hover {
+    color: #007bff;
+    /*↳ On met une couleur aux liens lors du survol de ceux-ci*/
+}
+
+/*--------------------*/
+/*--CORPS DE LA PAGE--*/
+/*--------------------*/
+
+/* Paramétrage de l'effet de monter*/
+@keyframes monterFlou {
+    from {
+        opacity: 0;
+        transform: translateY(2vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0vw);
+    }
+}
+/*Liens présents sur la page*/
+#lien {
+    transition: all 0.5s ease-in-out;
+    /*↳ On donne un temps de "latence" pour que la transition se finalise*/
+}
+/*Survol des liens présents sur la page*/
+#lien:hover {
+    text-shadow: 2px 2px 2px white;
+    /*↳ On donne un effet de profondeur avec des ombres aux liens survolés*/
+}
+
+/* Paramètres de style pour le titre principal */
+#titre {
+    background: linear-gradient(90deg, #000, #222);
+    /* ↳ On applique un dégradé discret du noir au gris foncé pour donner de la profondeur au fond */
+    padding: 1vw 2vw;
+    /* ↳ On ajoute des marges internes équilibrées pour un espace bien défini autour du texte */
+    font-size: 3vw;
+    /* ↳ On ajuste la taille du texte pour s'adapter à la largeur de l'écran (responsive) */
+    color: #007bff;
+    /* ↳ On utilise un bleu vif pour mettre en avant le titre et attirer l'œil */
+    text-shadow: 1px 1px 2px #fff, 0 0 5px #007bff;
+    /* ↳ On ajoute une ombre blanche légère et un effet lumineux bleu pour une meilleure lisibilité */
+    border: 2px solid #007bff;
+    /* ↳ On encadre le texte avec une bordure fine de couleur bleue, assortie au texte */
+    border-radius: 100vw;
+    /* ↳ On adoucit légèrement les coins pour un aspect plus moderne et moins rigide */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    /* ↳ On ajoute une ombre discrète pour détacher le titre de l'arrière-plan */
+    text-align: center;
+    /* ↳ On centre le texte horizontalement pour une présentation harmonieuse */
+    font-family: 'Arial', sans-serif;
+    /* ↳ On utilise une police sobre et professionnelle pour garantir une lecture claire */
+    margin: 5vw auto 2vw auto;
+    /* ↳ On centre le titre avec une marge équilibrée tout autour pour un alignement parfait et on ajoute une marge supérieure et inférieure pour aéré*/
+    max-width: 90%;
+    /* ↳ On limite la largeur maximale du texte pour éviter les débordements sur les petits écrans */
+    animation: monterFlou 1s ease-out;
+    /* ↳ On attribut une animation lors du lancement de la page*/
+}
+
+/*Paramètre des sous-titres*/
+#sous-titre{
+    background-image: url('fondnoir.webp');
+    /* ↳ On met un fond d'écran dans la box de sous-titre */
+    border: #007bff solid;
+    /* ↳ On paramètre les bordures de la box de sous-titre */
+    padding: 1.5vw;
+    /* ↳ On ajoute un écart interne entre le texte et le bord */
+    border-radius: 100vw;
+    /* ↳ On arrondit les bordures de la box */
+    text-align: center;
+    /*↳ On centre le texte contenu dans la box*/
+    width: 70vw;
+    /*↳ On initialise la largeur de la box*/
+    justify-self: center;
+    /*↳ On centre la box*/
+    animation: monterFlou 1s ease-out;
+    /*↳ On attribut une animation lors du lancement de la page*/
+    transition: all 0.5s ease-in-out;
+    /*↳ On paramètre la transition lors du survol de la box*/
+}
+
+/*Survol du sous titre*/
+#sous-titre:hover{
+    transform: scale(0.95);
+    /*↳ On réduit légèrement la taille de la boîte du titre au survol*/
+    color: red;
+    /*↳ On met le texte en rouge au survol*/
+}
+
+/*Liste globale 'ul' contenant les différentes certifications*/
+#certifications-diplomes {
+    padding-left: 0;
+    /*↳ On retire l'indentation automatique des listes, ce qui entraîne la suppression des puces de liste (list-style)*/
+    justify-content: center;
+    /*↳ On centre les éléments enfants de 'certifications'*/
+    animation: monterFlou 1s ease-out;
+    /* ↳ On attribut une animation lors du lancement de la page*/
+}
+
+/*Paramètres des sous-listes correspondant à chaque liste de 'certifications'*/
+#certifications-diplomes #sousPartCertifDiplomes {
+    background-image: url(fondnoir.webp);
+    /*↳ On attribue une image de fond identique à chaque élément de la liste 'certifications'*/
+    list-style: none;
+    /*↳ On retire les pointeurs des sous-listes de 'certifications'*/
+    display: flex;
+    /*↳ On rend les éléments enfants de chaque sous-liste flexibles pour pouvoir les modeler à notre guise*/
+    flex-direction: row;
+    /*↳ On fait en sorte que les éléments internes soient toujours en ligne et non en colonnes (sauf contre-indication ==> Responsive)*/
+    margin: 3vw;
+    /*↳ On met une marge autour de chaque élément de 'certifications' afin de différencier chaque élément*/
+    padding: 2vw;
+    /*↳ On met un écart interne pour ne pas que les sous-éléments soient collés à la box*/
+    align-items: center;
+    /*↳ On centre les éléments enfants à la verticale dans la box 'sousPartCertif'*/
+    border-radius: 2vw;
+    /*↳ On arrondit les bords de la box*/
+}
+
+/*Paramètres globaux des images contenues dans chaque sous-liste de 'certifications'*/
+#certifications-diplomes #sousPartCertifDiplomes img {
+    width: 40vw;
+    /*↳ On initialise une taille maximale de largeur pour chaque image*/
+    height: 22vw;
+    /*↳ On initialise une taille maximale de hauteur pour chaque image (au cas où celle-ci ne serait pas au format 16:9)*/
+    border-radius: 1vw;
+    /*↳ On arrondit les bords de chaque image*/
+    transition: 0.5s all ease-in-out;
+    /*↳ On paramètre la latence et le style de transition*/
+}
+
+/*Survol des images présentant chaque certification*/
+#certifications-diplomes #sousPartCertifDiplomes img:hover {
+    transform: scale(0.95) rotateY(360deg);
+    /*↳ On effectue un dézoom sur l'image à 95% de l'échelle globale*/
+    opacity: 0.5;
+    /*↳ On rend également l'image transparente à 50%*/
+    box-shadow: 0px 0px 20px #007bff;
+    /*↳ On ajoute une ombre à la box*/
+}
+
+/*Paramètres des boxes pour lesquelles l'image se situe à droite*/
+#certifications-diplomes .droiteImg {
+    justify-content: right;
+    /*↳ On aligne le contenu de la sous-liste à droite pour avoir une image collée au rebord*/
+    text-align: right;
+    /*↳ On aligne le texte à droite pour qu'il soit parallèle à l'image*/
+}
+
+/*Paramètres du texte des boxes*/
+#certifications-diplomes #sousPartCertifDiplomes #textcertifdiplomes {
+    margin: 2vw;
+    /*↳ On ajoute une marge autour du texte pour aérer et ne pas être collé à l'image*/
+}
+
+/*Paramètres de la liste de compétences informatiques*/
+#competences-informatiques ul {
+    display: flex;
+    /*↳ On rend les éléments flexibles*/
+    flex-direction: row;
+    /*↳ On place les éléments en ligne*/
+    flex-wrap: wrap;
+    /*↳ On fait en sorte que lorsqu'il n'y a plus de place le contenu passe à la ligne*/
+    justify-content: center;
+    /*↳ On centre les éléments dans la liste qui est elle-même centré*/
+    animation: monterFlou 1s ease-out;
+    /*↳ On attribut une animation lors du lancement de la page*/
+    padding: 0;
+    text-align: center;
+}
+
+/*Paramètres des éléments de la liste de compétences informatiques*/
+#competences-informatiques ul li {
+    padding-inline: 1vw;
+    /*↳ On met un espace entre les différents éléments de la liste*/
+    list-style: none;
+    /*↳ On retire les puces par défaut de liste*/
+}
+
+/*Paramètre de la barre de progression globale*/
+progress {
+    display: flex;
+    /*↳ On rend les éléments flexibles */
+    width: 25vw;
+    /*↳ On fixe la largeur de la barre de progression à 25%/vw de la largeur de la fenêtre */
+    margin: 1vw auto;
+    /*↳ On ajoute un espace autour et on centre la barre horizontalement */
+    border-radius: 14px;
+    /*↳ On arrondit les coins pour un effet plus esthétique */
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+    /*↳ On ajoute un effet d'ombre pour simuler un relief */
+    background-color: #d0e7ff;
+    /*↳ On met un fond bleu clair pour une apparence agréable */
+}
+/*Paramètre de la barre de progression pour les navigateurs utilisant webkit*/
+progress::-webkit-progress-bar {
+    background-color: #d0e7ff;
+    /*↳ On applique une couleur de fond cohérente pour les navigateurs basés sur Webkit */
+    border-radius: 0.9vw;
+    /*↳ On arrondit les coins de la barre pour garder une harmonie visuelle */
+}
+
+/*Paramètre de la barre de progression interne pour les navigateurs utilisant webkit*/
+progress::-webkit-progress-value {
+    background-color: #007bff;
+    /*↳ On choisit un bleu vif pour indiquer la progression */
+    border-radius: 0.9vw;
+    /*↳ On arrondit les coins de la valeur de progression */
+    transition: background-color 0.3s ease;
+    /*↳ On ajoute une transition fluide pour les changements de couleur */
+}
+
+/*Paramètre de la barre de progression pour Firefox*/
+progress::-moz-progress-bar {
+    background-color: #007bff;
+    /*↳ On utilise la même couleur pour les navigateurs basés sur Mozilla */
+    border-radius: 0.9vw;
+    /*↳ On arrondit les coins pour un rendu homogène */
+    transition: background-color 0.3s ease;
+    /*↳ On ajoute une transition fluide pour les changements de couleur */
+}
+
+/*Survol de la barre de progression interne pour Webkit*/
+progress:hover::-webkit-progress-value {
+    background-color: #ff0000;
+    /*↳ On change la couleur en rouge vif lorsque l'utilisateur survole la barre */
+}
+
+/*Survol de la barre de progression pour Firefox*/
+progress:hover::-moz-progress-bar {
+    background-color: #ff0000;
+    /*↳ On applique le même changement de couleur pour Mozilla lors du survol */
+}
+
+/*----------------*/
+/*--PIED DE PAGE--*/
+/*----------------*/
+
+/* Pied de page paramètres globaux */
+footer {
+    background-color: rgb(0, 0, 0);
+    /*↳ On met un fond de couleur pour le pied de page */
+    color: white;
+    /*↳ On attribue une couleur au texte */
+    padding: 2vw;
+    /*↳ On met un espace (horizontal et vertical) pour un espace plus aéré */
+    text-align: center;
+    /*↳ On centre le texte */
+    max-width: 100vw;
+    /*↳ On couvre toute la largeur (horizontal) du pied de page */
+    margin-top: 2vw;
+    /*↳ On met une marge supérieure pour espacer le footer du contenu de la page */
+}
+
+/* Pied de page paramètres liste réseaux sociaux (ul) */
+footer #reseaux-sociaux {
+    list-style: none;
+    /*↳ On retire les puces de liste aux éléments de la liste des réseaux sociaux */
+    padding: 0;
+    /*↳ On retire l'indentation par défaut des listes */
+    display: flex;
+    /*↳ On rend les éléments de la liste flexibles pour une adaptation */
+    justify-content: center;
+    /*↳ On centre les éléments (réseaux sociaux) dans la box */
+}
+
+/* Pied de page paramètres éléments réseaux sociaux (li) */
+footer #reseaux-sociaux li {
+    margin-inline: 2vw;
+    /*↳ On met un espace entre les différents éléments pour aérer la présentation */
+}
+
+/* Pied de page paramètres liens réseaux sociaux (a) */
+footer #reseaux-sociaux a {
+    color: #007bff;
+    /*↳ On met les liens sociaux dans une couleur en particulier */
+    text-decoration: none;
+    /*↳ On désactive le soulignage par défaut des liens */
+}
+
+/* Pied de page paramètres liens réseaux sociaux (a) au survol */
+#footer #reseaux-sociaux a:hover {
+    text-decoration: underline;
+    /*↳ On souligne les liens survolés */
+}
+
+@media only screen and (max-width: 950px) {
+
+    /*Navbar de menu texte interne (liens vers autres pages)*/
+    nav ul li a {
+        margin: 1vw;
+        /*↳ On met une marge (horizontale et verticale) plus grande pour améliorer la visibilité des éléments*/
+        background-color: #fff;
+        /*↳ On met un fond de couleur aux éléments pour un effet de bouton*/
+        color: black;
+        /*↳ On met une couleur aux liens*/
+        border-radius: 2vw;
+        /*↳ On arrondit les cases "bouton"*/
+    }
+
+    /*Navbar de menu éléments de liste*/
+    nav li {
+        margin: 0.5vw;
+        /*↳ On met une marge (horizontale et verticale) entre les éléments pour une navbar moins "compactée"*/
+    }
+
+    /*Survol de tous les éléments*/
+    *:hover {
+        text-shadow: none;
+        /*↳ On annule les animations de contour de texte*/
+        transform: none;
+        /*↳ On annule les animations de transformation (zoom)*/
+    }
+
+    /* Paramètres de style pour le titre principal*/
+    #titre {
+        display: none;
+    }
+    /* Paramètres de style pour le logo de retour en haut */
+    #retourHaut{
+        display: none;
+    }
+    #sous-titre{
+        margin-top: 30vw;
+        margin-bottom: 0vw;
+    }
+
+    /*Paramètres des sous-listes correspondant à chaque liste de 'certifications'*/
+    #certifications-diplomes #sousPartCertifDiplomes {
+        flex-direction: column;
+        /*↳ On met le contenu des sous-listes en colonne et non en ligne car on se trouve sur un smartphone avec une hauteur supérieure à la largeur*/
+    }
+
+    /*Paramètres globaux des images contenues dans chaque sous-liste de 'certifications'*/
+    #certifications-diplomes #sousPartCertifDiplomes img {
+        width: 90vw;
+        /*↳ On initialise la largeur des images de présentation des certifications pour une uniformité maximale au niveau de la largeur*/
+        height: 50vw;
+        /*↳ On initialise la hauteur des images de présentation des certifications pour une uniformité maximale au niveau de la hauteur*/
+        border-radius: 1vw;
+        /*↳ On arrondit les bords de l'image de façon plus petite que sans le responsive*/
+    }
+
+    /*Paramètres des boxs pour lesquelles l'image se situe à droite*/
+    #certifications-diplomes #sousPartCertifDiplomes.droiteImg {
+        flex-direction: column-reverse;
+        /*↳ On place les images au-dessus du texte pour une uniformité au niveau du smartphone*/
+    }
+    progress{
+        width: 80vw;
+    }
+
+}
