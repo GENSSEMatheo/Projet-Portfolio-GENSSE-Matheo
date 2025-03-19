@@ -1,0 +1,198 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #071530;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    animation: slideUp 1s ease-in-out 1s forwards;
+}
+
+
+.loader img {
+    width: 20vw;
+    height: auto;
+    animation: slideIn 1s ease-in-out;
+    filter: invert(1);
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes slideUp {
+    0% { transform: translateY(0); }
+    60% { transform: translateY(50%); }
+    100% { transform: translateY(-100%); }
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+body {
+    margin: 0;
+    background-image: url("Images/photoAccueil.jpg");
+    background-size:100vw 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    font-family:'Courier New', Courier, monospace;
+}
+.italic{
+    font-style: italic;
+}
+p:hover{
+    text-shadow: 20px 0px 20px rgb(255, 255, 255);
+}
+p{
+    transition: text-shadow ease 0.5s;
+}
+img:hover{
+    transform: scale(0.9);
+}
+img{
+    transition: transform ease 0.5s;
+}
+nav {
+    position: fixed;
+    width: 20vw;
+    height: 100vh;
+    background-color: #071530;
+    box-shadow: #071530 0px 20px 20px 0px;
+    z-index: 2;
+    padding: 1vh 1vw;
+    display: flex;
+    flex-direction: column;
+}
+nav img {
+    height: 40vh;
+    width: 100%;
+    filter: invert(1);
+}
+nav ul{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    height: 54vh;
+    margin: 2vh 0;
+    justify-content: space-around;
+    text-align: center;
+}
+nav ul li{
+    background-color: white;
+    border-radius: 2vw;
+    padding: 2%;
+    transition: all ease 0.5s;
+}
+nav ul li:hover{
+    background-color: #3e4d6e;
+    transform: rotate(2deg) scale(0.95);
+}
+nav ul li a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #071530;
+    font-size: 1vw;
+}
+
+#droitePage{
+    width: 78vw;
+    height: 100vh;
+    margin-left: 22vw;
+    overflow-y: auto;
+    z-index: 3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#nomAccueilBienvenue{
+    margin: 35vh 0 50vh 0;
+    z-index: 3;
+    padding-left: 5vw;
+
+}
+#nomAccueilBienvenue ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+#nomAccueilBienvenue ul > li{
+    margin-right:2vw ;
+}
+#nomAccueilBienvenue ul li img{
+    width: 2vw;
+    filter: invert(1);
+}
+#nomAccueilBienvenue h2{
+    margin: 0;
+    font-size: 1.3vw;
+}
+#nomAccueilBienvenue h1{
+    font-size: 4.5vw;
+    margin: 0;
+    font-weight: bolder;
+    font-style: oblique;
+    color: #071530;
+    font-family: initial;
+}
+#presentationPersonnel{
+    width: 100%;
+    background-color: #071530b9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#imageProfil{
+    width: 20%;
+    border-radius: 100%;
+    border: solid white;
+}
+
+#presentationPersonnel h2{
+    color: white;
+    text-transform: uppercase;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 2rem;
+}
+#presentationPersonnel h3{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+#presentationPersonnel p{
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 1vw 2vw;
+}
