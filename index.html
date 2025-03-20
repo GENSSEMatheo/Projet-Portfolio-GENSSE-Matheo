@@ -14,15 +14,15 @@
     <div class="loader">
         <img src="Images/logo.png" alt="Logo">
     </div>
-
+    
     <nav>
         <img id="logoImg" src="Images/logo.png">
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="">Présentation personnelle</a></li>
-            <li><a href="">Certifications/Diplômes & Compétences</a></li>
+            <li><a href="index.html">A propos de moi</a></li>
+            <li><a href="">Mon parcours</a></li>
             <li><a href="">Expériences Professionnelles</a></li>
-            <li><a href="">Scolarité</a></li>
+            <li><a href="">Certifications/Diplômes</a></li>
+            <li><a href="">Compétences</a></li>
             <li><a href="">Projets</a></li>
             <li><a href="">Veille Technologique</a></li>
             <li><a href="">CV</a></li>
@@ -34,13 +34,14 @@
             <h1>Mathéo GENSSE</h1>
             <h2>Etudiant en BTS SIO <span class="italic">Spécialité SISR</span></h2>
             <ul>
-                <li><a href="https://www.linkedin.com/in/math%C3%A9o-gensse-92812326b/" target="_blank"><img src="Images/linkedin.png"></a></li>
+                <li><a href="https://www.linkedin.com/in/math%C3%A9o-gensse-92812326b/" target="_blank"><img
+                            src="Images/linkedin.png"></a></li>
                 <li><a href="https://github.com/GENSSEMatheo" target="_blank"><img src="Images/github.png"></a></li>
             </ul>
         </section>
         <section id="presentationPersonnel">
             <h2>Présentation personnelle</h2>
-            <img id="imageProfil" src="Images/imageProfil.jpg">
+            <img id="imageProfil" src="Images/imageProfil.jpg" onclick="ouvertureModal(this.src)">
             <h3>A propos de moi</h3>
             <p>
                 Développeur Web Junior passionné, je trouve un véritable plaisir à concevoir et développer des sites web
@@ -63,7 +64,73 @@
                 tout en approfondissant mes connaissances sur les réseaux et leur administration.
             </p>
 
-            <h3>Mes passions</h3>
+            <h3>Centre d'intérêts</h3>
+            <ul id="listeCIUl">
+                <li>
+                    <img src="Images/voyageAvion.webp" onclick="ouvertureModal(this.src)">
+                    <div>
+                        <h3>Voyager</h3>
+                        <p>Le voyage est ma passion principale. J'aime découvrir de nouveaux horizons, rencontrer des
+                            personnes venues d'ailleurs et apprendre de nouvelles cultures. Chaque aventure m'enrichit
+                            et élargit ma vision du monde.</p>
+                    </div>
+                </li>
+                <li class="inverse">
+                    <img src="Images/progPHP.webp" onclick="ouvertureModal(this.src)">
+                    <div>
+                        <h3>DÉVELOPPEMENT & PROGRAMMATION</h3>
+                        <p>Depuis que j'ai acquis des compétences en HTML, CSS et Python durant mes années de lycée,
+                            j'ai développé une véritable passion pour le développement. J'apprécie particulièrement le
+                            côté créatif de cette discipline, qui me motive énormément.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="Images/reseau.webp" onclick="ouvertureModal(this.src)">
+                    <div>
+                        <h3>INFRASTRUCTURES RÉSEAUX</h3>
+                        <p>Bien que complexe à apprendre en autodidacte, ma passion pour la communication entre machines
+                            (câbles, serveurs, baies de brassage, etc.) me motive à persévérer. J’aspire à mettre ces
+                            compétences au service des forces de l’ordre en tant que cyber-enquêteur.</p>
+                    </div>
+                </li>
+                <li class="inverse">
+                    <img src="Images/montage.webp" onclick="ouvertureModal(this.src)">
+                    <div>
+                        <h3>MONTAGE VIDÉO</h3>
+                        <p>Il y a quelques années, je me suis lancé dans le montage vidéo. J'apprécie le côté créatif
+                            que cet art peut apporter, et j'adore créer des vidéos avec divers effets pour donner un
+                            aspect dynamique aux images et aux séquences.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="Images/sensations.webp" onclick="ouvertureModal(this.src)">
+                    <div>
+                        <h3>SENSATIONS FORTES</h3>
+                        <p>Les sensations fortes me passionnent : elles me procurent une montée d'adrénaline et un vrai
+                            moment d'évasion. Que ce soit à travers des sports extrêmes ou des aventures audacieuses,
+                            chaque défi me permet de dépasser mes limites et de vivre pleinement chaque instant.</p>
+                    </div>
+                </li>
+            </ul>
         </section>
+
+
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2025 Portfolio de GENSSE Mathéo | Tous droits réservés</p>
+                
+                <ul class="footer-links">
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+        
+                <div class="social-icons">
+                    <a href="https://github.com/GENSSEMatheo" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/math%C3%A9o-gensse-92812326b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </footer>
+        
     </section>
 </body>
