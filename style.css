@@ -1,3 +1,68 @@
+/*---------*/
+/*KEYFRAMES*/
+/*---------*/
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    60% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/*----------------*/
+/*TOUTES LES PAGES*/
+/*----------------*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #3e4d6e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .loader {
     position: fixed;
     top: 0;
@@ -20,57 +85,24 @@
     filter: invert(1);
 }
 
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-
-
-@keyframes slideUp {
-    0% { transform: translateY(0); }
-    60% { transform: translateY(50%); }
-    100% { transform: translateY(-100%); }
-}
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
 body {
     margin: 0;
     background-image: url("Images/photoAccueil.jpg");
-    background-size:100vw 100vh;
+    background-size: 100vw 100vh;
     background-position: top;
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
     flex-direction: row;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
 }
-.italic{
-    font-style: italic;
-}
-p:hover{
+
+
+p:hover {
     text-shadow: 20px 0px 20px rgb(255, 255, 255);
 }
-p{
+
+p {
     transition: text-shadow ease 0.5s;
 }
 
@@ -85,14 +117,18 @@ nav {
     display: flex;
     flex-direction: column;
 }
+
 nav img {
     height: 40vh;
     width: 100%;
     filter: invert(1);
 }
-nav ul{
+nav > a{
+    padding: 0;
+}
+nav ul {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     flex-direction: column;
     list-style: none;
     padding: 0;
@@ -102,17 +138,20 @@ nav ul{
     justify-content: space-around;
     text-align: center;
 }
+
 nav ul li {
     display: flex;
     align-content: center;
     justify-content: center;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     background-color: #3e4d6e;
     transform: rotate(2deg) scale(0.95);
     color: white;
 }
-nav ul li a{
+
+nav ul li a {
     font-weight: bold;
     text-decoration: none;
     color: #071530;
@@ -124,7 +163,7 @@ nav ul li a{
     transition: background-color ease 0.5s, transform ease 0.5s, color ease 0.5s;
 }
 
-#droitePage{
+#droitePage {
     width: 78vw;
     height: 100vh;
     margin-left: 22vw;
@@ -135,34 +174,44 @@ nav ul li a{
     flex-direction: column;
     flex-wrap: nowrap;
 }
-#nomAccueilBienvenue{
+
+/*-------*/
+/*ACCUEIL*/
+/*-------*/
+#nomAccueilBienvenue {
     margin: 35vh 0 50vh 0;
     z-index: 3;
     padding-left: 5vw;
 
 }
-#nomAccueilBienvenue ul{
+
+#nomAccueilBienvenue ul {
     list-style: none;
     display: flex;
     flex-direction: row;
     padding: 0;
     margin: 1vh 0;
 }
-#nomAccueilBienvenue ul > li{
-    margin-right:2vw ;
+
+#nomAccueilBienvenue ul>li {
+    margin-right: 2vw;
 }
-#nomAccueilBienvenue ul li a{
+
+#nomAccueilBienvenue ul li a {
     display: flex;
 }
-#nomAccueilBienvenue ul li img{
+
+#nomAccueilBienvenue ul li img {
     width: 2vw;
     filter: invert(1);
 }
-#nomAccueilBienvenue h2{
+
+#nomAccueilBienvenue h2 {
     margin: 0;
     font-size: 1.3vw;
 }
-#nomAccueilBienvenue h1{
+
+#nomAccueilBienvenue h1 {
     font-size: 4.5vw;
     margin: 0;
     font-weight: bolder;
@@ -170,86 +219,25 @@ nav ul li a{
     color: #071530;
     font-family: initial;
 }
-#presentationPersonnel{
-    width: 100%;
-    background-color: #071530b9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#imageProfil{
-    width: 15rem;
-    border-radius: 100%;
+
+#nomAccueilBienvenue button {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 1vh 1vw;
+    font-size: 1vw;
+    border-radius: 50vw;
     border: solid white;
+    background-color: #071530;
+    transition: background-color ease 0.5s, transform ease 0.5s, color ease 0.5s;
     cursor: pointer;
 }
 
-#presentationPersonnel h2{
-    color: white;
-    text-transform: uppercase;
-    font-family:'Times New Roman', Times, serif;
-    text-align: center;
-    font-size: 2rem;
+#nomAccueilBienvenue button:hover {
+    background-color: white;
+    transform: rotate(2deg) scale(0.95);
+    color: #3e4d6e;
 }
-#presentationPersonnel h3{
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-}
-#presentationPersonnel p{
-    color: white;
-    font-size: 1rem;
-    text-align: center;
-    margin: 1vw 2vw;
-}
-
-#listeCIUl{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 3vh 1vw;
-    gap: 3vh;
-}
-#listeCIUl li{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
-}
-#listeCIUl li.inverse{
-    flex-direction: row-reverse;
-}
-#listeCIUl li.inverse div h3,
-#listeCIUl li.inverse div p{
-    text-align: right;
-    padding-right: 2vw;
-    margin: 1vh 0;
-}
-#listeCIUl li img{
-    width: 40%;
-    border: solid white;
-    aspect-ratio: 16/9;
-    cursor: pointer;
-}
-#listeCIUl li div{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-}
-#listeCIUl li div h3,
-#listeCIUl li div p{
-    text-align: left;
-    padding-left: 2vw;
-    margin: 1vh 0;
-}
-
-
-
-
-
-
-
 
 footer {
     background-color: #071530;
@@ -297,4 +285,214 @@ footer {
 .social-icons a:hover {
     transform: translateY(-3px);
     box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.2);
+}
+
+/*-------------------------*/
+/*TOUTES PAGES SAUF ACCUEIL*/
+/*-------------------------*/
+#presentationPersonnel,
+#parcoursScolaire,
+#certifDiplomes {
+    width: 100%;
+    background-color: #071530b9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#parcoursScolaire > h2,
+#presentationPersonnel > h2,
+#certifDiplomes h2 {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 2rem;
+}
+#parcoursScolaire > p,
+#presentationPersonnel p {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin: 1vw 2vw;
+}
+#presentationPersonnel > h3,
+#certifDiplomes > h3 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+#presentationPersonnel h4 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+/*---------------*/
+/*A PROPOS DE MOI*/
+/*---------------*/
+
+#imageProfil {
+    width: 15rem;
+    border-radius: 100%;
+    border: solid white;
+}
+
+
+
+
+
+
+#listeCIUl {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 3vh 1vw;
+    gap: 3vh;
+}
+
+#listeCIUl li {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+}
+
+#listeCIUl li.inverse {
+    flex-direction: row-reverse;
+}
+
+#listeCIUl li.inverse div h4,
+#listeCIUl li.inverse div p {
+    text-align: right;
+    padding-right: 2vw;
+    margin: 1vh 0;
+}
+
+#listeCIUl li img {
+    width: 40%;
+    border: solid white;
+    aspect-ratio: 16/9;
+}
+
+#listeCIUl li div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+#listeCIUl li div h4,
+#listeCIUl li div p {
+    text-align: left;
+    padding-left: 2vw;
+    margin: 1vh 0;
+}
+
+/*------------*/
+/*MON PARCOURS*/
+/*------------*/
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+.timeline::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.event {
+    background: white;
+    padding: 1vw;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: 3vh 0;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+.event h3 {
+    background-color: #071530;
+    color: white;
+    padding: 0.5vw;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+.event h2 {
+    padding: 1vh;
+    margin: 0;
+    background: #3e4d6e;
+    color: white;
+    font-size: 1.3rem;
+}
+.event p {
+    padding: 1vw;
+    margin: 0;
+    background: #3e4d6e;
+    color: white;
+}
+
+.event::before {
+    content: "";
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    background-color: transparent;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*------------*/
+/*MON PARCOURS*/
+/*------------*/
+#certifications-diplomes {
+    padding-left: 0;
+    justify-content: center;
+}
+#certifications-diplomes h3{
+    color: white;
+}
+#certifications-diplomes > li{
+    border-top: solid;
+}
+#certifications-diplomes li{
+    color: white;
+}
+#certifications-diplomes #sousPartCertifDiplomes {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 3vw;
+    padding: 2vw;
+    align-items: center;
+    border-radius: 2vw;
+}
+
+#certifications-diplomes #sousPartCertifDiplomes img {
+    width: 35vw;
+    border-radius: 0.5vw;
+    border: solid #3e4d6e;
+}
+
+
+#certifications-diplomes .droiteImg {
+    justify-content: right;
+    text-align: right;
+}
+
+#certifications-diplomes #sousPartCertifDiplomes #textcertifdiplomes {
+    margin: 2vw;
 }

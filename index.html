@@ -16,16 +16,16 @@
     </div>
     
     <nav>
-        <img id="logoImg" src="Images/logo.png">
+        <a href="index.html"><img id="logoImg" src="Images/logo.png"></a>
         <ul>
-            <li><a href="index.html">A propos de moi</a></li>
-            <li><a href="">Mon parcours</a></li>
-            <li><a href="">Expériences Professionnelles</a></li>
-            <li><a href="">Certifications/Diplômes</a></li>
+            <li><a href="aProposDeMoi.html">Qui suis-je ?</a></li>
+            <li><a href="monParcours.html">Mon parcours</a></li>
+            <li><a href="certifDiplomes.html">Certifications et diplômes</a></li>
+            <li><a href="">Expériences professionnelles</a></li>
             <li><a href="">Compétences</a></li>
             <li><a href="">Projets</a></li>
-            <li><a href="">Veille Technologique</a></li>
-            <li><a href="">CV</a></li>
+            <li><a href="">Veille technologique</a></li>
+            <li><a href="">Mon CV</a></li>            
         </ul>
     </nav>
     <section id="droitePage">
@@ -38,81 +38,9 @@
                             src="Images/linkedin.png"></a></li>
                 <li><a href="https://github.com/GENSSEMatheo" target="_blank"><img src="Images/github.png"></a></li>
             </ul>
+            <button onclick="window.location.href='aProposDeMoi.html';">Qui suis-je ?</button>
         </section>
-        <section id="presentationPersonnel">
-            <h2>Présentation personnelle</h2>
-            <img id="imageProfil" src="Images/imageProfil.jpg" onclick="ouvertureModal(this.src)">
-            <h3>A propos de moi</h3>
-            <p>
-                Développeur Web Junior passionné, je trouve un véritable plaisir à concevoir et développer des sites web
-                fonctionnels et intuitifs.
-                J’ai acquis des bases solides dans le <code>HTML</code> et le <code>CSS</code>, et j’apprécie
-                particulièrement
-                le processus créatif du développement, de l’idée initiale à la réalisation technique.
-            </p>
-            <p>
-                Cependant, au fil de mes apprentissages, je me suis découvert une affinité encore plus forte pour les
-                infrastructures réseaux.
-                L’administration, la gestion et la sécurisation des réseaux m’intéressent particulièrement, car elles
-                touchent à des aspects fondamentaux
-                du fonctionnement des systèmes informatiques. C’est dans ce domaine que je souhaite continuer à me
-                former et, à terme, orienter ma carrière.
-            </p>
-            <p>
-                Ce qui me motive, c’est l’envie de connecter les deux mondes : utiliser mes compétences en développement
-                web comme un point fort,
-                tout en approfondissant mes connaissances sur les réseaux et leur administration.
-            </p>
-
-            <h3>Centre d'intérêts</h3>
-            <ul id="listeCIUl">
-                <li>
-                    <img src="Images/voyageAvion.webp" onclick="ouvertureModal(this.src)">
-                    <div>
-                        <h3>Voyager</h3>
-                        <p>Le voyage est ma passion principale. J'aime découvrir de nouveaux horizons, rencontrer des
-                            personnes venues d'ailleurs et apprendre de nouvelles cultures. Chaque aventure m'enrichit
-                            et élargit ma vision du monde.</p>
-                    </div>
-                </li>
-                <li class="inverse">
-                    <img src="Images/progPHP.webp" onclick="ouvertureModal(this.src)">
-                    <div>
-                        <h3>DÉVELOPPEMENT & PROGRAMMATION</h3>
-                        <p>Depuis que j'ai acquis des compétences en HTML, CSS et Python durant mes années de lycée,
-                            j'ai développé une véritable passion pour le développement. J'apprécie particulièrement le
-                            côté créatif de cette discipline, qui me motive énormément.</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="Images/reseau.webp" onclick="ouvertureModal(this.src)">
-                    <div>
-                        <h3>INFRASTRUCTURES RÉSEAUX</h3>
-                        <p>Bien que complexe à apprendre en autodidacte, ma passion pour la communication entre machines
-                            (câbles, serveurs, baies de brassage, etc.) me motive à persévérer. J’aspire à mettre ces
-                            compétences au service des forces de l’ordre en tant que cyber-enquêteur.</p>
-                    </div>
-                </li>
-                <li class="inverse">
-                    <img src="Images/montage.webp" onclick="ouvertureModal(this.src)">
-                    <div>
-                        <h3>MONTAGE VIDÉO</h3>
-                        <p>Il y a quelques années, je me suis lancé dans le montage vidéo. J'apprécie le côté créatif
-                            que cet art peut apporter, et j'adore créer des vidéos avec divers effets pour donner un
-                            aspect dynamique aux images et aux séquences.</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="Images/sensations.webp" onclick="ouvertureModal(this.src)">
-                    <div>
-                        <h3>SENSATIONS FORTES</h3>
-                        <p>Les sensations fortes me passionnent : elles me procurent une montée d'adrénaline et un vrai
-                            moment d'évasion. Que ce soit à travers des sports extrêmes ou des aventures audacieuses,
-                            chaque défi me permet de dépasser mes limites et de vivre pleinement chaque instant.</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
+        
 
 
         <footer>
@@ -120,15 +48,14 @@
                 <p>&copy; 2025 Portfolio de GENSSE Mathéo | Tous droits réservés</p>
                 
                 <ul class="footer-links">
-                    <li><a href="#about">À propos</a></li>
+                    <li><a href="aProposDeMoi.html">À propos</a></li>
                     <li><a href="#projects">Projets</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-        
-                <div class="social-icons">
-                    <a href="https://github.com/GENSSEMatheo" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/math%C3%A9o-gensse-92812326b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </div>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/GENSSEMatheo" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/math%C3%A9o-gensse-92812326b/" target="_blank">Linkedin</a></li>
+                </ul>
             </div>
         </footer>
         
