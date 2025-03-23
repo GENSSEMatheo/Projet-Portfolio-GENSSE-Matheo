@@ -292,17 +292,24 @@ footer {
 /*-------------------------*/
 #presentationPersonnel,
 #parcoursScolaire,
-#certifDiplomes {
+#certifDiplomes,
+#expPro,
+#competences,
+#projets {
     width: 100%;
     background-color: #071530b9;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2vh 0;
 }
 
 #parcoursScolaire > h2,
 #presentationPersonnel > h2,
-#certifDiplomes h2 {
+#certifDiplomes > h2,
+#expPro > h2,
+#competences > h2,
+#projets > h2 {
     color: white;
     text-transform: uppercase;
     font-family: 'Times New Roman', Times, serif;
@@ -310,9 +317,12 @@ footer {
     font-size: 2rem;
 }
 #parcoursScolaire > p,
-#presentationPersonnel p {
+#presentationPersonnel p,
+#certifDiplomes > p,
+#expPro > p {
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     text-align: center;
     margin: 1vw 2vw;
 }
@@ -322,7 +332,7 @@ footer {
     color: white;
     text-transform: uppercase;
 }
-#presentationPersonnel h4 {
+#presentationPersonnel h4{
     text-align: center;
     color: white;
     text-transform: uppercase;
@@ -336,11 +346,6 @@ footer {
     border-radius: 100%;
     border: solid white;
 }
-
-
-
-
-
 
 #listeCIUl {
     display: flex;
@@ -388,16 +393,41 @@ footer {
     margin: 1vh 0;
 }
 
-/*------------*/
-/*MON PARCOURS*/
-/*------------*/
+/*-------------------------------------------------*/
+/*MON PARCOURS ET MES CERTIF ET DIPLOMES ET EXP PRO*/
+/*-------------------------------------------------*/
+#tampon{
+    position: absolute;
+    width: 15%;
+    left: 4%;
+    top: 10%;
+    transform: rotate(-20deg);
+    background: none;
+    border-top: none;
+    border-bottom: none;
+}
+#certifsDiplomesBlocBas{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+#certifs{
+    width: 45%;
+    text-align: center;
+    color: white;
+}
+#diplomes{
+    width: 45%;
+    text-align: center;
+    color: white;
+}
 .timeline {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     width: 100%;
-    margin: auto;
 }
 .timeline::before {
     content: "";
@@ -412,23 +442,30 @@ footer {
 }
 .event {
     background: white;
-    padding: 1vw;
+    padding: 0.5vw;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 70%;
-    margin: 3vh 0;
+    width: 70rem;
+    max-width: 95%;
+    margin-top: 6vh;
     position: relative;
     text-align: center;
     z-index: 2;
 }
+.event ul{
+    background-color: #3e4d6e;
+    margin: 0;
+    text-align: left;
+    padding: 1vh 2vw;
+}
 .event h3 {
     background-color: #071530;
-    color: white;
+    color: rgb(138, 0, 0);
     padding: 0.5vw;
     margin: 0;
     border-radius: 5px 5px 0 0;
 }
-.event h2 {
+.event h4 {
     padding: 1vh;
     margin: 0;
     background: #3e4d6e;
@@ -441,7 +478,27 @@ footer {
     background: #3e4d6e;
     color: white;
 }
-
+.event #boxButtonChrono{
+    background-color: #3e4d6e;
+}
+.event button{
+    font-weight: bold;
+    text-decoration: none;
+    color: #071530;
+    width: 80%;
+    padding: 1rem 0;
+    font-size: 1rem;
+    border-radius: 50vw;
+    background-color: white;
+    transition: background-color ease 0.5s, transform ease 0.5s, color ease 0.5s;
+    margin: 2vh 0;
+    cursor: pointer;
+}
+.event button:hover{
+    background-color: #071530;
+    transform: scale(0.95);
+    color: white;
+}
 .event::before {
     content: "";
     position: absolute;
@@ -455,44 +512,84 @@ footer {
     transform: translateX(-50%);
 }
 
-/*------------*/
-/*MON PARCOURS*/
-/*------------*/
-#certifications-diplomes {
-    padding-left: 0;
-    justify-content: center;
+/*-----------*/
+/*COMPETENCES*/
+/*-----------*/
+#competences h4 {
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    background-color: white;
+    padding: 1vh 0;
+    width: 100%;
+    border-radius: 0 0 2vw 2vw;
+    border: solid #071530;
+    font-weight: bold;
 }
-#certifications-diplomes h3{
+#competences h3 {
+    text-align: center;
     color: white;
+    text-transform: uppercase;
+    background-color: #3e4d6e;
+    padding: 2vh 0;
+    border-top: solid white;
+    border-bottom: solid white;
+    width: 100%;
 }
-#certifications-diplomes > li{
-    border-top: solid;
-}
-#certifications-diplomes li{
-    color: white;
-}
-#certifications-diplomes #sousPartCertifDiplomes {
-    list-style: none;
+#competences section{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
+#competences ul{
+    display: flex;
+    justify-content: center;
     flex-direction: row;
-    margin: 3vw;
-    padding: 2vw;
-    align-items: center;
-    border-radius: 2vw;
+    flex-wrap: wrap;
+    gap: 2vw;
+    padding: 0;
+}
+#competences ul li{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+progress {
+    display: flex;
+    width: 15vw;
+    margin: 1vw auto;
+    border-radius: 14px;
+    background-color: white;
 }
 
-#certifications-diplomes #sousPartCertifDiplomes img {
-    width: 35vw;
-    border-radius: 0.5vw;
-    border: solid #3e4d6e;
+progress::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 0.9vw;
 }
 
 
-#certifications-diplomes .droiteImg {
-    justify-content: right;
-    text-align: right;
+progress::-webkit-progress-value {
+    background-color: #071530;
+    border-radius: 0.9vw;
+    transition: background-color 0.3s ease;
 }
 
-#certifications-diplomes #sousPartCertifDiplomes #textcertifdiplomes {
-    margin: 2vw;
+progress::-moz-progress-bar {
+    background-color: #071530;
+    border-radius: 0.9vw;
+    transition: background-color 0.3s ease;
+}
+
+progress:hover::-webkit-progress-value {
+    background-color: #3e4d6e;
+}
+
+progress:hover::-moz-progress-bar {
+    background-color: #3e4d6e;
+}
+#logiciels img{
+    height: 5rem;
+    filter:contrast(1.5);
 }
