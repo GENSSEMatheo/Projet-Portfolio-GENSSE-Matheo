@@ -295,7 +295,8 @@ footer {
 #certifDiplomes,
 #expPro,
 #competences,
-#projets {
+#projets,
+#CV {
     width: 100%;
     background-color: #071530b9;
     display: flex;
@@ -309,7 +310,8 @@ footer {
 #certifDiplomes > h2,
 #expPro > h2,
 #competences > h2,
-#projets > h2 {
+#projets > h2,
+#CV > h2 {
     color: white;
     text-transform: uppercase;
     font-family: 'Times New Roman', Times, serif;
@@ -460,7 +462,7 @@ footer {
 }
 .event h3 {
     background-color: #071530;
-    color: rgb(138, 0, 0);
+    color: #ff3131;
     padding: 0.5vw;
     margin: 0;
     border-radius: 5px 5px 0 0;
@@ -658,11 +660,29 @@ progress:hover::-moz-progress-bar {
     padding: 0;
 }
 #langagesProgProjets img{
-    width: 5rem;
+    height: 6rem;
 }
 #imageProjet{
     width: 100%;
     margin: 1vh 0;
     border: solid white;
     border-radius: 1vw;
+}
+
+/*--------------------*/
+/*VEILLE TECHNOLOGIQUE*/
+/*--------------------*/
+#noVeille{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: #071530b9;
+}
+
+#noVeille h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 3rem;
 }
