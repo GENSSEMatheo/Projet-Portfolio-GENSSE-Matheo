@@ -484,7 +484,6 @@ footer {
     text-align: left;
     padding: 1vh 2vw;
 }
-
 .event h3 {
     background-color: #071530;
     color: #ff3131;
@@ -766,7 +765,22 @@ progress:hover::-moz-progress-bar {
     p:hover {
         text-shadow: none;
     }
+    #burgerMenu {
+        position: fixed;
+        top: 2%;
+        left: 8%;
+        z-index: 5;
+        transition: transform 0.5s ease;
+    }
 
+    #burger-icon span {
+        display: flex;
+        width: 35px;
+        height: 5px;
+        margin: 8px 0;
+        transition: background-color 0.5s ease;
+        background-color: #071530;
+    }
     nav {
         position: fixed;
         width: 100vw;
@@ -775,7 +789,8 @@ progress:hover::-moz-progress-bar {
         z-index: 4;
         padding: 1vh 1vw;
         display: flex;
-        top: -102%;
+        top: -102vh;
+        transition: top 0.5s ease;
     }
 
     nav ul {
