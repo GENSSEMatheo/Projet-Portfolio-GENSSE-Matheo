@@ -11,18 +11,12 @@ function burgerMenuClic() {
             navGlob.style.overflowY = 'auto';
             navGlob.style.top = '0%';
 
-            spanBurgerMenu.forEach(span => {
-                span.style.backgroundColor = 'white';
-            });
 
         } else {
             burgerMenu.style.transform = 'rotate(0deg)';
             navGlob.style.overflowY = 'hidden';
             navGlob.style.top = '-102%';
 
-            spanBurgerMenu.forEach(span => {
-                span.style.backgroundColor = '#071530';
-            });
         }
 
         burgerMenuTurn = !burgerMenuTurn;

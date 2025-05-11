@@ -316,13 +316,18 @@ footer {
 #competences>h2,
 #projets>h2,
 #CV>h2 {
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
     text-align: center;
-    flex-wrap: wrap;
-    overflow-wrap: break-word;
-    font-size: 2rem;
+    width: 90%;
+    color: white;
+    background-color: #071530;
+    padding: 2vh 0;
+    margin: 0vh 0vw 2vh 0vw;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #parcoursScolaire>p,
@@ -484,6 +489,7 @@ footer {
     text-align: left;
     padding: 1vh 2vw;
 }
+
 .event h3 {
     background-color: #071530;
     color: #ff3131;
@@ -551,6 +557,21 @@ footer {
 /*-----------*/
 /*COMPETENCES*/
 /*-----------*/
+#competences h5 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    background-color: rgb(39, 79, 255);
+    padding: 1vh 0;
+    width: 90%;
+    margin: 0 5%;
+    border-radius: 0 0 2vw 2vw;
+    border: solid #071530;
+    font-weight: bold;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+}
+
 #competences h4 {
     text-align: center;
     color: black;
@@ -756,6 +777,10 @@ progress:hover::-moz-progress-bar {
         width: 60vw;
     }
 
+    #tampon {
+        display: none;
+    }
+
     body {
         margin: 0;
         background-image: url("Images/photoAccueilTel.jpg");
@@ -765,6 +790,7 @@ progress:hover::-moz-progress-bar {
     p:hover {
         text-shadow: none;
     }
+
     #burgerMenu {
         position: fixed;
         top: 2%;
@@ -778,9 +804,9 @@ progress:hover::-moz-progress-bar {
         width: 35px;
         height: 5px;
         margin: 8px 0;
-        transition: background-color 0.5s ease;
-        background-color: #071530;
+        background-color: white;
     }
+
     nav {
         position: fixed;
         width: 100vw;
@@ -796,6 +822,7 @@ progress:hover::-moz-progress-bar {
     nav ul {
         width: 90%;
         margin: 2vh 5%;
+        height: 40vh;
     }
 
     nav ul li a:hover {
@@ -806,18 +833,20 @@ progress:hover::-moz-progress-bar {
 
     nav ul li a:active {
         background-color: #3e4d6e;
-        transform:scale(0.95);
+        transform: scale(0.95);
         color: white;
     }
 
     nav ul li a {
-        font-size: 4vw;
+        font-size: 3vw;
     }
 
     #droitePage {
         width: 100vw;
         margin-left: 0;
     }
+
+
 
     /*-------*/
     /*ACCUEIL*/
@@ -827,9 +856,11 @@ progress:hover::-moz-progress-bar {
         padding-left: 5vw;
         margin: 28vh 0 50vh 0;
     }
-    #nomAccueilBienvenue ul{
+
+    #nomAccueilBienvenue ul {
         gap: 7vw;
     }
+
     #nomAccueilBienvenue ul li a {
         display: flex;
     }
@@ -843,7 +874,7 @@ progress:hover::-moz-progress-bar {
     }
 
     #nomAccueilBienvenue h1 {
-        font-size: 15vw;
+        font-size: 12vw;
     }
 
     #nomAccueilBienvenue button {
@@ -856,11 +887,13 @@ progress:hover::-moz-progress-bar {
         transform: scale(0.95);
         color: #3e4d6e;
     }
+
     #nomAccueilBienvenue button:hover {
         background-color: none;
         transform: none;
         color: none;
     }
+
     footer {
         padding: 7vh 2%;
         width: 96%;
@@ -876,6 +909,7 @@ progress:hover::-moz-progress-bar {
     .footer-links li a:active {
         color: #3e4d6e;
     }
+
     .footer-links li a:hover {
         color: none;
     }
@@ -893,11 +927,32 @@ progress:hover::-moz-progress-bar {
         width: 96%;
         padding: 2vh 2vw;
     }
+
     #parcoursScolaire>p,
     #presentationPersonnel p,
     #certifDiplomes>p,
     #expPro>p {
         text-align: justify;
+    }
+    #parcoursScolaire>h2,
+    #presentationPersonnel>h2,
+    #certifDiplomes>h2,
+    #expPro>h2,
+    #competences>h2,
+    #projets>h2,
+    #CV>h2 {
+        font-size: 8vw;
+        text-align: center;
+        width: 90%;
+        color: white;
+        background-color: #071530;
+        padding: 2vh 0;
+        margin: 7vh 0vw 2vh 0vw;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
     }
     /*---------------*/
     /*A PROPOS DE MOI*/
@@ -956,9 +1011,11 @@ progress:hover::-moz-progress-bar {
     #diplomes {
         width: 49%;
     }
-    .event ul li{
+
+    .event ul li {
         text-align: center;
     }
+
     .event button {
         border-radius: 20px;
         flex-wrap: wrap;
@@ -970,11 +1027,13 @@ progress:hover::-moz-progress-bar {
         transform: none;
         color: none;
     }
+
     .event button:active {
         background-color: #071530;
         transform: scale(0.95);
         color: white;
     }
+
     /*-----------*/
     /*COMPETENCES*/
     /*-----------*/
@@ -1004,7 +1063,7 @@ progress:hover::-moz-progress-bar {
     }
 
     progress {
-        width: 100%;
+        width: 85%;
     }
 
 
@@ -1015,6 +1074,7 @@ progress:hover::-moz-progress-bar {
     progress:hover::-moz-progress-bar {
         background-color: none;
     }
+
     progress:active::-webkit-progress-value {
         background-color: #3e4d6e;
     }
@@ -1022,16 +1082,19 @@ progress:hover::-moz-progress-bar {
     progress:active::-moz-progress-bar {
         background-color: #3e4d6e;
     }
-    #logiciels ul{
+
+    #logiciels ul {
         display: flex;
         flex-direction: row;
         margin-left: -2vw;
         justify-content: center;
     }
-    #logiciels ul li{
+
+    #logiciels ul li {
         width: auto;
         display: flex;
     }
+
     #logiciels img {
         height: auto;
         width: 15vw;
@@ -1057,6 +1120,7 @@ progress:hover::-moz-progress-bar {
         margin-left: -2vw;
         padding: 1vh 1vw;
     }
+
     #projets #logoProjet {
         width: 50vw;
     }
@@ -1068,9 +1132,11 @@ progress:hover::-moz-progress-bar {
     #langagesProgProjets img:hover {
         transform: none;
     }
+
     #langagesProgProjets img:active {
         transform: matrix(0.87, 0.5, 0, 0.87, 0, 1);
     }
+
     #imageProjet {
         margin-left: -2vw;
     }
@@ -1083,10 +1149,11 @@ progress:hover::-moz-progress-bar {
         overflow-wrap: break-word;
         padding: 1vh 1vw;
     }
+
     /*--*/
     /*CV*/
     /*--*/
-    #CV iframe{
+    #CV iframe {
         width: 90vw;
     }
 }
