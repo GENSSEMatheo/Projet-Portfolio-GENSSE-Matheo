@@ -87,7 +87,17 @@
     animation: slideIn 1s ease-in-out;
     filter: invert(1);
 }
+.contenu-cache {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+}
 
+.contenu-visible {
+    max-height: 100%;
+    opacity: 1;
+}
 body {
     margin: 0;
     background-image: url("Images/photoAccueil.jpg");
@@ -615,9 +625,13 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
+    width: 100%;
 }
 
+#competences>section > section{
+    margin: 0 10%;
+    width: 80%;
+} 
 #competences ul {
     display: flex;
     justify-content: center;
