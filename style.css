@@ -43,6 +43,9 @@
     }
 }
 
+
+
+
 /*----------------*/
 /*TOUTES LES PAGES*/
 /*----------------*/
@@ -95,6 +98,8 @@ body {
     display: flex;
     flex-direction: row;
     font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+
 }
 
 
@@ -175,6 +180,7 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    min-height: 100vh;
 }
 
 /*-------*/
@@ -246,6 +252,7 @@ footer {
     color: white;
     text-align: center;
     padding: 7vh 0;
+    flex-shrink: 0;
 }
 
 .footer-container {
@@ -288,6 +295,11 @@ footer {
     transform: translateY(-3px);
     box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.2);
 }
+
+#droitePage>*:not(footer) {
+    flex: 1 0 auto;
+}
+
 
 /*-------------------------*/
 /*TOUTES PAGES SAUF ACCUEIL*/
@@ -344,7 +356,7 @@ footer {
 
 }
 
-#presentationPersonnel>h3,
+#presentationPersonnel h3,
 #certifDiplomes>h3 {
     text-align: center;
     color: white;
@@ -398,7 +410,7 @@ footer {
 }
 
 #listeCIUl li img {
-    width: 40%;
+    width: 30vw;
     border: solid white;
     aspect-ratio: 16/9;
 }
@@ -557,6 +569,7 @@ footer {
 /*-----------*/
 /*COMPETENCES*/
 /*-----------*/
+
 #competences h5 {
     text-align: center;
     color: white;
@@ -594,10 +607,11 @@ footer {
     padding: 2vh 0;
     border-top: solid white;
     border-bottom: solid white;
-    width: 100%;
+    width: 140%;
+    margin-left: -20%;
 }
 
-#competences section {
+#competences>section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -662,38 +676,65 @@ progress:hover::-moz-progress-bar {
 /*-------*/
 /*PROJETS*/
 /*-------*/
-#projets>h3 {
+
+#projets>section>h3 {
     text-align: center;
     color: white;
     text-transform: uppercase;
-    background-color: #3e4d6e;
+    background-color: #071530;
     padding: 2vh 0;
     border-top: solid white;
     border-bottom: solid white;
     width: 100%;
     margin: 0;
+    font-size: 1.5rem;
 }
 
 #projets section>h4 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    background-color: black;
+    padding: 1vh 0;
+    width: 95%;
+    border-radius: 0 0 2vw 2vw;
+    border: solid white;
+    border-top: none;
+    font-weight: bold;
+    margin: 0 2.5%;
+    font-size: 1.3rem;
+}
+
+#projets section>h5 {
     text-align: center;
     color: black;
     text-transform: uppercase;
     background-color: white;
     padding: 1vh 0;
-    width: 100%;
+    width: 80%;
     border-radius: 0 0 2vw 2vw;
-    border: solid #071530;
+    border: solid black;
     border-top: none;
     font-weight: bold;
-    margin: 0;
+    margin: 0 10%;
+    font-size: 1.1rem;
 }
 
-#projets>section {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#projets section>h6 {
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    background-color: white;
+    padding: 1vh 0;
+    width: 60%;
+    border-radius: 0 0 2vw 2vw;
+    border: solid black;
+    border-top: none;
+    font-weight: bold;
+    margin: 0 20%;
+    font-size: 0.9rem;
 }
+
 
 #boxGlobParagraphe {
     margin: 2vh auto;
@@ -702,7 +743,7 @@ progress:hover::-moz-progress-bar {
     background-color: #071530;
     border-radius: 1vw;
     border: solid white;
-    width: 100%;
+    width: 90%;
 }
 
 #boxGlobParagraphe h2,
@@ -715,9 +756,9 @@ progress:hover::-moz-progress-bar {
 }
 
 #projets #logoProjet {
-    width: 10rem;
+    width: 20%;
     border: solid white;
-    border-radius: 100px;
+    border-radius: 100%;
 }
 
 #langagesProgProjets {
@@ -739,10 +780,11 @@ progress:hover::-moz-progress-bar {
 }
 
 #imageProjet {
-    width: 100%;
-    margin: 1vh 0;
+    width: 90%;
+    margin: 1vh 5%;
     border: solid white;
     border-radius: 1vw;
+    justify-self: center;
 }
 
 /*--------------------*/
@@ -934,6 +976,7 @@ progress:hover::-moz-progress-bar {
     #expPro>p {
         text-align: justify;
     }
+
     #parcoursScolaire>h2,
     #presentationPersonnel>h2,
     #certifDiplomes>h2,
@@ -954,6 +997,7 @@ progress:hover::-moz-progress-bar {
         font-weight: bold;
         font-family: 'Courier New', Courier, monospace;
     }
+
     /*---------------*/
     /*A PROPOS DE MOI*/
     /*---------------*/
@@ -1037,22 +1081,6 @@ progress:hover::-moz-progress-bar {
     /*-----------*/
     /*COMPETENCES*/
     /*-----------*/
-    #competences h4 {
-        margin-left: -2vw;
-        width: 100%;
-
-    }
-
-    #competences h3 {
-        width: 100vw;
-        margin-left: -2vw;
-    }
-
-    #competences section {
-        margin-left: -2vw;
-        width: 90%;
-    }
-
     #competences ul {
         flex-direction: column;
         gap: none;
@@ -1103,26 +1131,14 @@ progress:hover::-moz-progress-bar {
     /*-------*/
     /*PROJETS*/
     /*-------*/
-    #projets>h3 {
-        width: 100vw;
-        margin-left: -2vw;
-    }
-
-    #projets section>h4 {
-        margin-left: -2vw;
-    }
-
-    #projets>section {
-        margin-left: -2vw;
-    }
-
-    #boxGlobParagraphe {
-        margin-left: -2vw;
-        padding: 1vh 1vw;
+    #projets {
+        width: 104vw;
+        margin-left: -4vw;
     }
 
     #projets #logoProjet {
         width: 50vw;
+        border-radius: 100%;
     }
 
     #langagesProgProjets img {
@@ -1135,10 +1151,6 @@ progress:hover::-moz-progress-bar {
 
     #langagesProgProjets img:active {
         transform: matrix(0.87, 0.5, 0, 0.87, 0, 1);
-    }
-
-    #imageProjet {
-        margin-left: -2vw;
     }
 
     /*--------------------*/

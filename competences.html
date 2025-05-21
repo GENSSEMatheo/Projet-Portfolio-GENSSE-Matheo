@@ -16,9 +16,9 @@
     </div>
     <div id="burgerMenu" onclick="burgerMenuClic()">
         <span id="burger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </span>
     </div>
     <nav>
@@ -28,7 +28,9 @@
             <li><a href="monParcours.html">Mon parcours</a></li>
             <li><a href="certifDiplomes.html">Certifications et diplômes</a></li>
             <li><a href="expPro.html">Expériences professionnelles</a></li>
-            <li><a href="competences.html" style="background-color: #3e4d6e;transform: rotate(2deg) scale(0.95);color: white;">Compétences</a></li>
+            <li><a href="competences.html"
+                    style="background-color: #3e4d6e;transform: rotate(2deg) scale(0.95);color: white;">Compétences</a>
+            </li>
             <li><a href="projets.html">Projets</a></li>
             <li><a href="veilleTechnologiques.html">Veille technologique</a></li>
             <li><a href="cv.html">Mon CV</a></li>
@@ -37,105 +39,139 @@
     <section id="droitePage">
         <section id="competences">
             <h2>Compétences</h2>
-            <h3>Développement & Programmation</h3>
             <section id="dev">
-                <h4>Logiques de programmation</h4>
-                <ul>
-                    <li>Variables : <progress id="barrePourcent" max="100" value="95"></progress></li>
-                    <li>Structures Conditionnelles : <progress id="barrePourcent" max="100" value="90"></progress></li>
-                    <li>Boucles : <progress id="barrePourcent" max="100" value="90"></progress></li>
-                    <li>Tableaux : <progress id="barrePourcent" max="100" value="85"></progress></li>
-                    <li>Fonctions : <progress id="barrePourcent" max="100" value="75"></progress></li>
-                </ul>
-                <h4>Langages de programmation web (FullStack)</h4>
-                <ul>
-                    <li>HTML : <progress id="barrePourcent" max="100" value="80"></progress></li>
-                    <li>CSS : <progress id="barrePourcent" max="100" value="80"></progress></li>
-                    <li>PHP : <progress id="barrePourcent" max="100" value="40"></progress></li>
-                    <li>JavaScript : <progress id="barrePourcent" max="100" value="10"></progress></li>
-                </ul>
+                <h3>Développement & Programmation</h3>
+                <section>
+                    <h4>Logiques de programmation</h4>
+                    <ul>
+                        <li>Variables : <progress id="barrePourcent" max="100" value="95"></progress></li>
+                        <li>Structures Conditionnelles : <progress id="barrePourcent" max="100" value="90"></progress>
+                        </li>
+                        <li>Boucles : <progress id="barrePourcent" max="100" value="90"></progress></li>
+                        <li>Tableaux : <progress id="barrePourcent" max="100" value="85"></progress></li>
+                        <li>Fonctions : <progress id="barrePourcent" max="100" value="75"></progress></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Langages de programmation web (FullStack)</h4>
+                    <ul>
+                        <li>HTML : <progress id="barrePourcent" max="100" value="80"></progress></li>
+                        <li>CSS : <progress id="barrePourcent" max="100" value="80"></progress></li>
+                        <li>PHP : <progress id="barrePourcent" max="100" value="40"></progress></li>
+                        <li>JavaScript : <progress id="barrePourcent" max="100" value="10"></progress></li>
+                    </ul>
+                </section>
             </section>
-            <h3>Administration Systèmes & Réseaux</h3>
+
             <section id="reseau">
-                <h4>Langages de programmation réseaux</h4>
-                <ul>
-                    <li>BATSH : <progress id="barrePourcent" max="100" value="20"></progress></li>
-                    <li>Python : <progress id="barrePourcent" max="100" value="50"></progress></li>
-                </ul>
-                <h4>Protocoles de communications (<i>Classement par couche du Modèle OSI</i>)</h4>
-                <h5>Couche 1 : Physique</h5>
-                <ul>
-                    <li>Ethernet : <progress id="barrePourcent" max="100" value="70"></progress></li>
-                </ul>
-                <h5>Couche 2 : Liaison de données</h5>
-                <ul>
-                    <li>ARP : <progress id="barrePourcent" max="100" value="5"></progress></li>
-                </ul>
-                <h5>Couche 3 : Réseau</h5>
-                <ul>
-                    <li>IPv4 : <progress id="barrePourcent" max="100" value="90"></progress></li>
-                    <li>ICMP: <progress id="barrePourcent" max="100" value="90"></progress></li>
-                    <li>RIP: <progress id="barrePourcent" max="100" value="70"></progress></li>
-                </ul>
-                <h5>Couche 4 : Transport</h5>
-                <ul>
-                    <li>TCP : <progress id="barrePourcent" max="100" value="10"></progress></li>
-                </ul>
-                <h5>Couche 5 : Session</h5>
-                <ul>
-                    <li>AUCUN PROTOCOLE ETUDIE SUR CETTE COUCHE</li>
-                </ul>
-                <h5>Couche 6 : Présentation</h5>
-                <ul>
-                    <li>SSL/TLS : <progress id="barrePourcent" max="100" value="30"></progress></li>
-                </ul>
-                <h5>Couche 7 : Application</h5>
-                <ul>
-                    <li>HTTP/HTTPS : <progress id="barrePourcent" max="100" value="50"></progress></li>
-                    <li>DNS : <progress id="barrePourcent" max="100" value="30"></progress></li>
-                    <li>DHCP : <progress id="barrePourcent" max="100" value="70"></progress></li>
-                    <li>SSH : <progress id="barrePourcent" max="100" value="60"></progress></li>
-                </ul>
-                <h4>Mécanismes et/ou techniques réseau</h4>
-                <ul>
-                    <li>Tables de routages : <progress id="barrePourcent" max="100" value="90"></progress></li>
-                    <li>VLAN : <progress id="barrePourcent" max="100" value="75"></progress></li>
-                    <li>NAT : <progress id="barrePourcent" max="100" value="50"></progress></li>
-                    <li>Firewall : <progress id="barrePourcent" max="100" value="40"></progress></li>
-                    <li>Port forwarding : <progress id="barrePourcent" max="100" value="30"></progress></li>
-                </ul>
-                <h4>Autre</h4>
-                <ul>
-                    <li>Binaire : <progress id="barrePourcent" max="100" value="90"></progress></li>
-                    <li>Active Directory : <progress id="barrePourcent" max="100" value="50"></progress></li>
-                    <li>Calcul de sous-réseaux : <progress id="barrePourcent" max="100" value="80"></progress></li>
-                </ul>
+                <h3>Administration Systèmes & Réseaux</h3>
+                <section>
+                    <h4>Langages de programmation réseaux</h4>
+                    <ul>
+                        <li>BATSH : <progress id="barrePourcent" max="100" value="20"></progress></li>
+                        <li>Python : <progress id="barrePourcent" max="100" value="50"></progress></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Protocoles de communications (<i>Classement par couche du Modèle OSI</i>)</h4>
+                    <section>
+                        <h5>Couche 1 : Physique</h5>
+                        <ul>
+                            <li>Ethernet : <progress id="barrePourcent" max="100" value="70"></progress></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h5>Couche 2 : Liaison de données</h5>
+                        <ul>
+                            <li>ARP : <progress id="barrePourcent" max="100" value="5"></progress></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h5>Couche 3 : Réseau</h5>
+                        <ul>
+                            <li>IPv4 : <progress id="barrePourcent" max="100" value="90"></progress></li>
+                            <li>ICMP: <progress id="barrePourcent" max="100" value="90"></progress></li>
+                            <li>RIP: <progress id="barrePourcent" max="100" value="70"></progress></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h5>Couche 4 : Transport</h5>
+                        <ul>
+                            <li>TCP : <progress id="barrePourcent" max="100" value="10"></progress></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h5>Couche 5 : Session</h5>
+                        <ul>
+                            <li>AUCUN PROTOCOLE ETUDIE SUR CETTE COUCHE</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h5>Couche 6 : Présentation</h5>
+                        <ul>
+                            <li>SSL/TLS : <progress id="barrePourcent" max="100" value="30"></progress></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h5>Couche 7 : Application</h5>
+                        <ul>
+                            <li>HTTP/HTTPS : <progress id="barrePourcent" max="100" value="50"></progress></li>
+                            <li>DNS : <progress id="barrePourcent" max="100" value="30"></progress></li>
+                            <li>DHCP : <progress id="barrePourcent" max="100" value="70"></progress></li>
+                            <li>SSH : <progress id="barrePourcent" max="100" value="60"></progress></li>
+                        </ul>
+                    </section>
+
+                </section>
+                <section>
+                    <h4>Mécanismes et/ou techniques réseau</h4>
+                    <ul>
+                        <li>Tables de routages : <progress id="barrePourcent" max="100" value="90"></progress></li>
+                        <li>VLAN : <progress id="barrePourcent" max="100" value="75"></progress></li>
+                        <li>NAT : <progress id="barrePourcent" max="100" value="50"></progress></li>
+                        <li>Firewall : <progress id="barrePourcent" max="100" value="40"></progress></li>
+                        <li>Port forwarding : <progress id="barrePourcent" max="100" value="30"></progress></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Autre</h4>
+                    <ul>
+                        <li>Binaire : <progress id="barrePourcent" max="100" value="90"></progress></li>
+                        <li>Active Directory : <progress id="barrePourcent" max="100" value="50"></progress></li>
+                        <li>Calcul de sous-réseaux : <progress id="barrePourcent" max="100" value="80"></progress></li>
+                    </ul>
+                </section>
             </section>
-            <h3>Bases de Données</h3>
+
             <section id="bdd">
+                <h3>Bases de Données</h3>
                 <ul>
                     <li>Requêtes SQL : <progress id="barrePourcent" max="100" value="70"></progress></li>
                     <li>PHP MY ADMIN: <progress id="barrePourcent" max="100" value="35"></progress></li>
                     <li>PDO (PHP) : <progress id="barrePourcent" max="100" value="15"></progress></li>
                 </ul>
             </section>
-            <h3>Cybersécurité</h3>
+
             <section id="cyber">
+                <h3>Cybersécurité</h3>
                 <ul>
                     <li>Metasploit (Kali) : <progress id="barrePourcent" max="100" value="35"></progress></li>
                     <li>Pare-feu: <progress id="barrePourcent" max="100" value="10"></progress></li>
                 </ul>
             </section>
-            <h3>Pratique linguistiques</h3>
-            <section id="cyber">
+
+            <section id="langues">
+                <h3>Pratique linguistiques</h3>
                 <ul>
-                    <li>Français (Langue maternelle) : <progress id="barrePourcent" max="100" value="70"></progress></li>
+                    <li>Français (Langue maternelle) : <progress id="barrePourcent" max="100" value="70"></progress>
+                    </li>
                     <li>Anglais: <progress id="barrePourcent" max="100" value="20"></progress></li>
                     <li>Espagnol: <progress id="barrePourcent" max="100" value="35"></progress></li>
                 </ul>
             </section>
-            <h3>Outils & Logiciels</h3>
+
             <section id="logiciels">
+                <h3>Outils & Logiciels</h3>
                 <ul>
                     <li><img src="Images/vsCode.png"></li>
                     <li><img src="Images/pkt.png"></li>
@@ -144,6 +180,7 @@
                     <li><img src="Images/virtualbox.png"></li>
                     <li><img src="Images/phpmyadmin.png"></li>
                     <li><img src="Images/logoNmap.webp"></li>
+                    <li><img src="Images/apache.png"></li>
                 </ul>
             </section>
         </section>

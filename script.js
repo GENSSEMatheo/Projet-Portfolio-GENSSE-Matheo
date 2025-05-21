@@ -22,3 +22,25 @@ function burgerMenuClic() {
         burgerMenuTurn = !burgerMenuTurn;
     }
 }
+
+function basculeContenuDesTitres() {
+
+    document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(titre => {
+        titre.style.cursor = "pointer"; 
+        titre.addEventListener("click", function () {
+            const boite = titre.parentElement; 
+            if (!boite) return;
+            Array.from(boite.children).forEach(element => {
+                if (element !== titre) {
+                    if (element.style.display === "none") {
+                        element.style.display = "";
+                    } else {
+                        element.style.display = "none";
+                    }
+                }
+            });
+        });
+    });
+}
+
+window.addEventListener("DOMContentLoaded", basculeContenuDesTitres);
