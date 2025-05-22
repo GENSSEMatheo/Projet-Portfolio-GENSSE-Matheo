@@ -41,7 +41,7 @@ function basculeContenuDesTitres() {
         elements.forEach(el => {
             el.style.overflow = "hidden";
             el.style.transition = "max-height 0.4s, opacity 0.4s";
-            el.style.maxHeight = el.scrollHeight + "px";
+            el.style.maxHeight = el.scrollHeight + "vh";
             el.style.opacity = "1";
         });
 
