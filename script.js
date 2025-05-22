@@ -26,35 +26,33 @@ function burgerMenuClic() {
 function basculeContenuDesTitres() {
     document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(titre => {
         titre.style.cursor = "pointer";
+        const parent = titre.parentElement;
+        if (!parent) return;
 
-        const boite = titre.parentElement;
-        if (!boite) return;
+        // On prend tous les éléments frères après le titre
+        let suivant = titre.nextElementSibling;
+        const elements = [];
+        while (suivant) {
+            elements.push(suivant);
+            suivant = suivant.nextElementSibling;
+        }
 
-        const autresElements = Array.from(boite.children).filter(el => el !== titre);
-
-        // Tout est ouvert par défaut
-        autresElements.forEach(element => {
-            element.classList.add("contenu-cache", "contenu-visible");
-            element.style.maxHeight = element.scrollHeight + "px";
-            element.style.opacity = "1";
+        // Initialisation : tout visible
+        elements.forEach(el => {
+            el.style.overflow = "hidden";
+            el.style.transition = "max-height 0.4s, opacity 0.4s";
+            el.style.maxHeight = el.scrollHeight + "px";
+            el.style.opacity = "1";
         });
 
         titre.addEventListener("click", function () {
-            autresElements.forEach(element => {
-                if (element.classList.contains("contenu-visible")) {
-                    // Fermer avec animation
-                    element.style.maxHeight = "0";
-                    element.style.opacity = "0";
-                    setTimeout(() => {
-                        element.classList.remove("contenu-visible");
-                    }, 1000); // Durée identique à la transition CSS
+            elements.forEach(el => {
+                if (el.style.maxHeight !== "0px") {
+                    el.style.maxHeight = "0px";
+                    el.style.opacity = "0";
                 } else {
-                    // Ouvrir avec animation
-                    element.classList.add("contenu-visible");
-                    // Forcer le recalcul pour l'animation
-                    void element.offsetWidth;
-                    element.style.maxHeight = element.scrollHeight + "px";
-                    element.style.opacity = "1";
+                    el.style.maxHeight = el.scrollHeight + "px";
+                    el.style.opacity = "1";
                 }
             });
         });

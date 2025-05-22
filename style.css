@@ -87,17 +87,7 @@
     animation: slideIn 1s ease-in-out;
     filter: invert(1);
 }
-.contenu-cache {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-    opacity: 0;
-}
 
-.contenu-visible {
-    max-height: 100%;
-    opacity: 1;
-}
 body {
     margin: 0;
     background-image: url("Images/photoAccueil.jpg");
