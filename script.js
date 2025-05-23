@@ -29,7 +29,6 @@ function basculeContenuDesTitres() {
         const parent = titre.parentElement;
         if (!parent) return;
 
-        // On prend tous les éléments frères après le titre
         let suivant = titre.nextElementSibling;
         const elements = [];
         while (suivant) {
@@ -37,26 +36,38 @@ function basculeContenuDesTitres() {
             suivant = suivant.nextElementSibling;
         }
 
-        // Initialisation : tout visible
         elements.forEach(el => {
             el.style.overflow = "hidden";
-            el.style.transition = "max-height 0.4s, opacity 0.4s";
-            el.style.maxHeight = el.scrollHeight + "vh";
+            el.style.maxHeight = "1000000000vh";
             el.style.opacity = "1";
         });
 
         titre.addEventListener("click", function () {
             elements.forEach(el => {
-                if (el.style.maxHeight !== "0px") {
-                    el.style.maxHeight = "0px";
+                if (el.style.maxHeight !== "0vh") {
+                    el.style.maxHeight = "0vh";
                     el.style.opacity = "0";
+                    if (el.id === "boxGlobParagraphe") {
+                        el.style.padding = "0";
+                        el.style.margin = "0";
+                    }
                 } else {
-                    el.style.maxHeight = el.scrollHeight + "px";
+                    el.style.maxHeight = "1000000000vh";
                     el.style.opacity = "1";
+                    if (el.id === "boxGlobParagraphe") {
+                        el.style.padding = "";
+                        el.style.margin = "";
+                    }
                 }
             });
         });
     });
 }
 
-window.addEventListener("DOMContentLoaded", basculeContenuDesTitres);
+window.addEventListener("DOMContentLoaded", function () {
+    if (
+        window.location.href.includes("projets.html") ||
+        window.location.href.includes("competences.html")) {
+        basculeContenuDesTitres();
+    }
+});

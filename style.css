@@ -310,7 +310,8 @@ footer {
 #expPro,
 #competences,
 #projets,
-#CV {
+#CV,
+#veilleTechnologiques {
     width: 100%;
     background-color: #071530b9;
     display: flex;
@@ -321,6 +322,7 @@ footer {
     overflow-wrap: break-word;
 }
 
+#veilleTechnologiques>h2,
 #parcoursScolaire>h2,
 #presentationPersonnel>h2,
 #certifDiplomes>h2,
@@ -342,6 +344,7 @@ footer {
     font-family: 'Courier New', Courier, monospace;
 }
 
+#veilleTechnologiques>p,
 #parcoursScolaire>p,
 #presentationPersonnel p,
 #certifDiplomes>p,
@@ -569,59 +572,17 @@ footer {
 /*-----------*/
 /*COMPETENCES*/
 /*-----------*/
-
-#competences h5 {
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-    background-color: rgb(39, 79, 255);
-    padding: 1vh 0;
-    width: 90%;
-    margin: 0 5%;
-    border-radius: 0 0 2vw 2vw;
-    border: solid #071530;
-    font-weight: bold;
-    flex-wrap: wrap;
-    overflow-wrap: break-word;
-}
-
-#competences h4 {
-    text-align: center;
-    color: black;
-    text-transform: uppercase;
-    background-color: white;
-    padding: 1vh 0;
-    width: 100%;
-    border-radius: 0 0 2vw 2vw;
-    border: solid #071530;
-    font-weight: bold;
-    flex-wrap: wrap;
-    overflow-wrap: break-word;
-}
-
-#competences h3 {
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-    background-color: #3e4d6e;
-    padding: 2vh 0;
-    border-top: solid white;
-    border-bottom: solid white;
-    width: 140%;
-    margin-left: -20%;
-}
-
-#competences>section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#competences>section{
     width: 100%;
 }
-
-#competences>section > section{
+#competences>section>section {
     margin: 0 10%;
     width: 80%;
-} 
+}
+#competences>section>section>section {
+    margin: 0 15%;
+    width: 70%;
+}
 #competences ul {
     display: flex;
     justify-content: center;
@@ -677,11 +638,44 @@ progress:hover::-moz-progress-bar {
     filter: contrast(1.5);
 }
 
-/*-------*/
-/*PROJETS*/
-/*-------*/
+/*----------------------*/
+/*PROJETS ET COMPETENCES*/
+/*----------------------*/
+#competences>section>h3::before,
+#competences section>h4::before,
+#competences section>h5::before,
+#competences section>h6::before,
+#projets>section>h3::before,
+#projets section>h4::before,
+#projets section>h5::before,
+#projets section>h6::before {
+    content: "▼ ";
+}
 
-#projets>section>h3 {
+#competences>section>h3::after,
+#competences section>h4::after,
+#competences section>h5::after,
+#competences section>h6::after,
+#projets>section>h3::after,
+#projets section>h4::after,
+#projets section>h5::after,
+#projets section>h6::after {
+    content: " ▼";
+}
+
+#competences>section>h3:hover,
+#competences section>h4:hover,
+#competences section>h5:hover,
+#competences section>h6:hover,
+#projets>section>h3:hover,
+#projets section>h4:hover,
+#projets section>h5:hover,
+#projets section>h6:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+#projets>section>h3,
+#competences>section>h3 {
     text-align: center;
     color: white;
     text-transform: uppercase;
@@ -690,10 +684,10 @@ progress:hover::-moz-progress-bar {
     border-top: solid white;
     border-bottom: solid white;
     width: 100%;
-    margin: 0;
+    margin: 0.5% 0;
     font-size: 1.5rem;
 }
-
+#competences section>h4,
 #projets section>h4 {
     text-align: center;
     color: white;
@@ -703,43 +697,44 @@ progress:hover::-moz-progress-bar {
     width: 95%;
     border-radius: 0 0 2vw 2vw;
     border: solid white;
-    border-top: none;
     font-weight: bold;
-    margin: 0 2.5%;
+    margin: 0.5% 2.5%;
     font-size: 1.3rem;
 }
 
+#competences section>h5,
 #projets section>h5 {
     text-align: center;
-    color: black;
+    color: white;
     text-transform: uppercase;
-    background-color: white;
+    background-color: black;
     padding: 1vh 0;
     width: 80%;
     border-radius: 0 0 2vw 2vw;
-    border: solid black;
-    border-top: none;
+    border: solid white;
     font-weight: bold;
-    margin: 0 10%;
+    margin: 0.5% 10%;
     font-size: 1.1rem;
 }
 
+#competences section>h6,
 #projets section>h6 {
     text-align: center;
-    color: black;
+    color: white;
     text-transform: uppercase;
-    background-color: white;
+    background-color: black;
     padding: 1vh 0;
     width: 60%;
     border-radius: 0 0 2vw 2vw;
-    border: solid black;
-    border-top: none;
+    border: solid white;
     font-weight: bold;
-    margin: 0 20%;
+    margin: 0.5% 20%;
     font-size: 0.9rem;
 }
 
-
+/*-------*/
+/*PROJETS*/
+/*-------*/
 #boxGlobParagraphe {
     margin: 2vh auto;
     padding: 2vh 0;
