@@ -104,20 +104,47 @@ function envoyerDemandeDoc() {
 
 
 function ouvrirModalImage(src) {
-    const modal = document.getElementById('modalImage');
-    const img = document.getElementById('modalImgContent');
+    let modal = document.getElementById('modalImage');
+    let img;
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'modalImage';
+        modal.style.position = 'fixed';
+        modal.style.top = '0';
+        modal.style.left = '0';
+        modal.style.width = '100vw';
+        modal.style.height = '100vh';
+        modal.style.display = 'flex';
+        modal.style.alignItems = 'center';
+        modal.style.justifyContent = 'center';
+        modal.style.zIndex = '9999';
+        modal.style.cursor = 'zoom-out';
+        modal.innerHTML = `
+            <img id="modalImgContent" src="" alt="Agrandissement" style="max-width:90vw;max-height:90vh;">
+        `;
+        document.body.appendChild(modal);
+        img = modal.querySelector('#modalImgContent');
+        modal.addEventListener('click', fermerModalImage);
+    } else {
+        img = document.getElementById('modalImgContent');
+    }
     img.src = src;
     modal.style.display = "flex";
+    setTimeout(() => modal.classList.add('active'), 10); 
     document.body.style.overflow = "hidden";
 }
-
 function fermerModalImage() {
-    document.getElementById('modalImage').style.display = "none";
-    document.getElementById('modalImgContent').src = "";
-    document.body.style.overflow = "";
+    const modal = document.getElementById('modalImage');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => {
+            modal.style.display = "none";
+            const img = document.getElementById('modalImgContent');
+            if (img) img.src = "";
+            document.body.style.overflow = "";
+        }, 300); // correspond à la durée de la transition CSS
+    }
 }
-
-
 
 window.addEventListener("DOMContentLoaded", function () {
     if (
@@ -126,3 +153,5 @@ window.addEventListener("DOMContentLoaded", function () {
         basculeContenuDesTitres();
     }
 });
+
+
