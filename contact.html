@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de GENSSE Mathéo - Mon CV</title>
+    <title>Portfolio de GENSSE Mathéo - Contact</title>
     <link rel="icon" type="image/png" href="Images/logo.png">
     <meta name="description"
-        content="Découvrez les compétences en informatique, réseaux, cybersécurité et développement web de Mathéo GENSSE, étudiant en BTS SIO SISR à Besançon.">
+        content="Contactez Mathéo GENSSE pour toute question ou demande concernant son parcours en informatique, réseaux et cybersécurité.">
     <meta name="keywords"
-        content="Mathéo GENSSE, BTS SIO, SISR, compétences, informatique, réseaux, cybersécurité, développement web, portfolio, Besançon">
+        content="contact, Mathéo GENSSE, BTS SIO, SISR, informatique, réseaux, cybersécurité, portfolio, Besançon">
     <meta name="author" content="Mathéo GENSSE">
     <meta name="theme-color" content="#071530">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <div class="bandeau-haut"></div>
     <div class="loader">
         <img src="Images/logo.png" alt="Logo">
     </div>
@@ -37,21 +38,34 @@
             <li><a href="competences.html">🧠 Compétences</a></li>
             <li><a href="projets.html">🛠️ Projets</a></li>
             <li><a href="veilleTechnologiques.html">📰 Veilles technologiques</a></li>
-            <li><a href="cv.html" style="background-color: #3e4d6e;transform: rotate(2deg) scale(0.95);color: white;">📄
-                    Mon CV</a></li>
-            <li><a href="contact.html">✉️ Contact</a></li>
+            <li><a href="cv.html">📄 Mon CV</a></li>
+            <li><a href="contact.html"
+                    style="background-color: #3e4d6e;transform: rotate(2deg) scale(0.95);color: white;">✉️ Contact</a>
+            </li>
         </ul>
     </nav>
     <section id="droitePage">
-        <section id="CV">
-            <h2>📄 Mon CV 📄</h2>
-            <iframe src="Documents/CV GENSSE Mathéo.pdf#zoom=100" width="80%" height="1200px"
-                style="border: solid white;"></iframe>
+        <section id="contact">
+            <h2>✉️ Contactez-moi</h2>
+            <form method="POST" action="contact.php">
+                <label>
+                    <p>Nom :</p>
+                    <input type="text" name="nom" required>
+                </label>
+                <label>
+                    <p>Email :</p>
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    <p>Message :</p>
+                    <textarea name="message" required style="min-height:100px;"></textarea>
+                </label>
+                <button type="submit">Envoyer</button>
+            </form>
         </section>
         <footer>
             <div class="footer-container">
                 <p>&copy; 2025 Portfolio de GENSSE Mathéo | Tous droits réservés</p>
-
                 <ul class="footer-links">
                     <li><a href="aProposDeMoi.html">À propos</a></li>
                     <li><a href="projets.html">Projets</a></li>
@@ -60,6 +74,7 @@
                 <ul class="footer-links">
                     <li><a href="politiqueDeConfidentialite.html">Politique de confidentialité</a></li>
                 </ul>
+
                 <ul class="footer-links">
                     <li><a href="https://github.com/GENSSEMatheo" target="_blank">GitHub</a></li>
                     <li><a href="https://www.linkedin.com/in/math%C3%A9o-gensse-92812326b/" target="_blank">Linkedin</a>
@@ -67,6 +82,7 @@
                 </ul>
             </div>
         </footer>
-
     </section>
 </body>
+
+</html>

@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de GENSSE Mathéo - Compétences</title>
+    <meta name="description"
+        content="Découvrez les compétences en informatique, réseaux, cybersécurité et développement web de Mathéo GENSSE, étudiant en BTS SIO SISR à Besançon.">
+    <meta name="keywords"
+        content="Mathéo GENSSE, BTS SIO, SISR, compétences, informatique, réseaux, cybersécurité, développement web, portfolio, Besançon">
+    <meta name="author" content="Mathéo GENSSE">
     <link rel="icon" type="image/png" href="Images/logo.png">
+    <meta name="theme-color" content="#071530">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -24,21 +30,22 @@
     <nav>
         <a href="index.html"><img id="logoImg" src="Images/logo.png"></a>
         <ul>
-            <li><a href="aProposDeMoi.html">Qui suis-je ?</a></li>
-            <li><a href="monParcours.html">Mon parcours</a></li>
-            <li><a href="certifDiplomes.html">Certifications et diplômes</a></li>
-            <li><a href="expPro.html">Expériences professionnelles</a></li>
+            <li><a href="aProposDeMoi.html">🙋‍♂️ Qui suis-je ?</a></li>
+            <li><a href="monParcours.html">🛤️ Mon parcours</a></li>
+            <li><a href="certifDiplomes.html">🎓 Certifications et diplômes</a></li>
+            <li><a href="expPro.html">💼 Expériences professionnelles</a></li>
             <li><a href="competences.html"
-                    style="background-color: #3e4d6e;transform: rotate(2deg) scale(0.95);color: white;">Compétences</a>
-            </li>
-            <li><a href="projets.html">Projets</a></li>
-            <li><a href="veilleTechnologiques.html">Veille technologique</a></li>
-            <li><a href="cv.html">Mon CV</a></li>
+                    style="background-color: #3e4d6e;transform: rotate(2deg) scale(0.95);color: white;">🧠
+                    Compétences</a></li>
+            <li><a href="projets.html">🛠️ Projets</a></li>
+            <li><a href="veilleTechnologiques.html">📰 Veilles technologiques</a></li>
+            <li><a href="cv.html">📄 Mon CV</a></li>
+            <li><a href="contact.html">✉️ Contact</a></li>
         </ul>
     </nav>
     <section id="droitePage">
         <section id="competences">
-            <h2>Compétences</h2>
+            <h2>🧠 Compétences 🧠</h2>
             <section id="dev">
                 <h3>Développement & Programmation</h3>
                 <section>
@@ -173,18 +180,30 @@
             <section id="logiciels">
                 <h3>Outils & Logiciels</h3>
                 <ul>
-                    <li><img src="Images/vsCode.png"></li>
-                    <li><img src="Images/pkt.png"></li>
-                    <li><img src="Images/wireshark.png"></li>
-                    <li><img src="Images/filezila.png"></li>
-                    <li><img src="Images/virtualbox.png"></li>
-                    <li><img src="Images/phpmyadmin.png"></li>
-                    <li><img src="Images/logoNmap.webp"></li>
-                    <li><img src="Images/apache.png"></li>
+                    <li><img src="Images/vsCode.png" onclick="ouvrirModalImage(this.src)" style="cursor: zoom-in;"></li>
+                    <li><img src="Images/pkt.png" onclick="ouvrirModalImage(this.src)" style="cursor: zoom-in;"></li>
+                    <li><img src="Images/wireshark.png" onclick="ouvrirModalImage(this.src)" style="cursor: zoom-in;">
+                    </li>
+                    <li><img src="Images/filezila.png" onclick="ouvrirModalImage(this.src)" style="cursor: zoom-in;">
+                    </li>
+                    <li><img src="Images/virtualbox.png" onclick="ouvrirModalImage(this.src)" style="cursor: zoom-in;">
+                    </li>
+                    <li><img src="Images/phpmyadmin.png" onclick="ouvrirModalImage(this.src)" style="cursor: zoom-in;">
+                    </li>
+                    <li><img src="Images/logoNmap.webp" onclick="ouvrirModalImage(this.src)" style="cursor: zoom-in;">
+                    </li>
+                    <li><img src="Images/apache.png" onclick="ouvrirModalImage(this.src)" style="cursor: zoom-in;"></li>
                 </ul>
             </section>
         </section>
 
+        <div id="modalImage"
+            style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(10,20,40,0.95); z-index:9999; align-items:center; justify-content:center;">
+            <span onclick="fermerModalImage()"
+                style="position:absolute;top:2vw;right:3vw;font-size:3rem;color:white;cursor:pointer;z-index:10001;">&times;</span>
+            <img id="modalImgContent" src="" alt="Agrandissement"
+                style="max-width:90vw; max-height:85vh; border-radius:1vw; box-shadow:0 0 30px #000;">
+        </div>
 
         <footer>
             <div class="footer-container">
@@ -192,8 +211,11 @@
 
                 <ul class="footer-links">
                     <li><a href="aProposDeMoi.html">À propos</a></li>
-                    <li><a href="#projects">Projets</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="projets.html">Projets</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul class="footer-links">
+                    <li><a href="politiqueDeConfidentialite.html">Politique de confidentialité</a></li>
                 </ul>
                 <ul class="footer-links">
                     <li><a href="https://github.com/GENSSEMatheo" target="_blank">GitHub</a></li>

@@ -45,7 +45,6 @@
 
 
 
-
 /*----------------*/
 /*TOUTES LES PAGES*/
 /*----------------*/
@@ -311,7 +310,8 @@ footer {
 #competences,
 #projets,
 #CV,
-#veilleTechnologiques {
+#veilleTechnologiques,
+#contact {
     width: 100%;
     background-color: #071530b9;
     display: flex;
@@ -322,6 +322,7 @@ footer {
     overflow-wrap: break-word;
 }
 
+#contact>h2,
 #veilleTechnologiques>h2,
 #parcoursScolaire>h2,
 #presentationPersonnel>h2,
@@ -344,6 +345,7 @@ footer {
     font-family: 'Courier New', Courier, monospace;
 }
 
+#contact p,
 #veilleTechnologiques>p,
 #parcoursScolaire>p,
 #presentationPersonnel p,
@@ -569,20 +571,103 @@ footer {
     transform: translateX(-50%);
 }
 
+#formDemandeDoc {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(7, 21, 48, 0.93);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+#formDemandeDocInner {
+    background: #162447;
+    border-radius: 1vw;
+    box-shadow: 0 4px 24px #000a;
+    padding: 3vh 4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    min-width: 320px;
+    max-width: 95vw;
+    width: 400px;
+}
+
+#formDemandeDocInner label {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+
+#formDemandeDocInner input,
+#formDemandeDocInner textarea {
+    width: 100%;
+    padding: 0.7em;
+    border-radius: 0.5vw;
+    border: 1px solid #3e4d6e;
+    font-size: 1em;
+    background: #f3f6fa;
+    color: #071530;
+    margin-top: 0.3em;
+    margin-bottom: 0.7em;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+#formDemandeDocInner button[type="submit"] {
+    background: #3e4d6e;
+    color: white;
+    padding: 0.7em 2em;
+    border-radius: 0.7vw;
+    border: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#formDemandeDocInner button[type="submit"]:hover {
+    background: #223052;
+}
+
+#formDemandeDocInner button[type="button"] {
+    background: #b3b3b3;
+    color: #071530;
+    padding: 0.7em 2em;
+    border-radius: 0.7vw;
+    border: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#formDemandeDocInner button[type="button"]:hover {
+    background: #ff3131;
+    color: white;
+}
+
 /*-----------*/
 /*COMPETENCES*/
 /*-----------*/
-#competences>section{
+#competences>section {
     width: 100%;
 }
+
 #competences>section>section {
     margin: 0 10%;
     width: 80%;
 }
+
 #competences>section>section>section {
     margin: 0 15%;
     width: 70%;
 }
+
 #competences ul {
     display: flex;
     justify-content: center;
@@ -687,6 +772,7 @@ progress:hover::-moz-progress-bar {
     margin: 0.5% 0;
     font-size: 1.5rem;
 }
+
 #competences section>h4,
 #projets section>h4 {
     text-align: center;
@@ -805,6 +891,54 @@ progress:hover::-moz-progress-bar {
 }
 
 
+/*-------*/
+/*CONTACT*/
+/*-------*/
+#contact form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+#contact label {
+    font-weight: bold;
+    margin-bottom: 0.5vh;
+    display: block;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 1vh 1vw;
+    border-radius: 0.7vw;
+    border: 1px solid #3e4d6e;
+    font-size: 1.1rem;
+    background-color: #fff;
+    color: #071530;
+    margin-top: 0.3vh;
+    margin-bottom: 1vh;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+#contact button[type="submit"] {
+    background-color: #071530;
+    color: white;
+    padding: 1vh 3vw;
+    border-radius: 1vw;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 1vh;
+}
+
+#contact button[type="submit"]:hover {
+    background-color: #223052;
+}
+
 @media only screen and (max-width: 600px) {
 
     /*----------------*/
@@ -860,10 +994,16 @@ progress:hover::-moz-progress-bar {
         transition: top 0.5s ease;
     }
 
+    #logoImg {
+        height: 30vh;
+        width: 80%;
+        margin: 0 10%;
+    }
+
     nav ul {
         width: 90%;
-        margin: 2vh 5%;
-        height: 40vh;
+        margin: 0vh 5%;
+        height: 50vh;
     }
 
     nav ul li a:hover {
@@ -962,8 +1102,6 @@ progress:hover::-moz-progress-bar {
     #parcoursScolaire,
     #certifDiplomes,
     #expPro,
-    #competences,
-    #projets,
     #CV {
         width: 96%;
         padding: 2vh 2vw;
@@ -976,6 +1114,8 @@ progress:hover::-moz-progress-bar {
         text-align: justify;
     }
 
+    #contact>h2,
+    #veilleTechnologiques>h2,
     #parcoursScolaire>h2,
     #presentationPersonnel>h2,
     #certifDiplomes>h2,
@@ -1077,6 +1217,13 @@ progress:hover::-moz-progress-bar {
         color: white;
     }
 
+    #formDemandeDocInner {
+        width: 95vw;
+        min-width: unset;
+        padding: 4vw 2vw;
+        font-size: 1em;
+    }
+
     /*-----------*/
     /*COMPETENCES*/
     /*-----------*/
@@ -1130,11 +1277,6 @@ progress:hover::-moz-progress-bar {
     /*-------*/
     /*PROJETS*/
     /*-------*/
-    #projets {
-        width: 104vw;
-        margin-left: -4vw;
-    }
-
     #projets #logoProjet {
         width: 50vw;
         border-radius: 100%;

@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de GENSSE Mathéo - Qui suis-je ?</title>
+    <meta name="description"
+        content="Découvrez les compétences en informatique, réseaux, cybersécurité et développement web de Mathéo GENSSE, étudiant en BTS SIO SISR à Besançon.">
+    <meta name="keywords"
+        content="Mathéo GENSSE, BTS SIO, SISR, compétences, informatique, réseaux, cybersécurité, développement web, portfolio, Besançon">
+    <meta name="author" content="Mathéo GENSSE">
     <link rel="icon" type="image/png" href="Images/logo.png">
+    <meta name="theme-color" content="#071530">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -25,21 +31,24 @@
         <a href="index.html"><img id="logoImg" src="Images/logo.png"></a>
         <ul>
             <li><a href="aProposDeMoi.html"
-                    style="background-color: #3e4d6e;transform: rotate(2deg) scale(0.95);color: white;">Qui suis-je
-                    ?</a></li>
-            <li><a href="monParcours.html">Mon parcours</a></li>
-            <li><a href="certifDiplomes.html">Certifications et diplômes</a></li>
-            <li><a href="expPro.html">Expériences professionnelles</a></li>
-            <li><a href="competences.html">Compétences</a></li>
-            <li><a href="projets.html">Projets</a></li>
-            <li><a href="veilleTechnologiques.html">Veille technologique</a></li>
-            <li><a href="cv.html">Mon CV</a></li>
+                    style="background-color: #3e4d6e;transform: rotate(2deg) scale(0.95);color: white;">🙋‍♂️ Qui
+                    suis-je ?</a></li>
+            <li><a href="monParcours.html">🛤️ Mon parcours</a></li>
+            <li><a href="certifDiplomes.html">🎓 Certifications et diplômes</a></li>
+            <li><a href="expPro.html">💼 Expériences professionnelles</a></li>
+            <li><a href="competences.html">🧠 Compétences</a></li>
+            <li><a href="projets.html">🛠️ Projets</a></li>
+            <li><a href="veilleTechnologiques.html">📰 Veilles
+                    technologiques</a></li>
+            <li><a href="cv.html">📄 Mon CV</a></li>
+            <li><a href="contact.html">✉️ Contact</a></li>
         </ul>
     </nav>
     <section id="droitePage">
         <section id="presentationPersonnel">
-            <h2>Qui suis-je ?</h2>
-            <img id="imageProfil" src="Images/imageProfil.jpg">
+            <h2>🙋‍♂️ Qui suis-je ? 🙋‍♂️</h2>
+            <img id="imageProfil" src="Images/imageProfil.jpg" onclick="ouvrirModalImage(this.src)"
+                style="cursor:zoom-in;">>
             <p>
                 Bonjour, je m'appelle <strong>Mathéo GENSSE</strong> et je suis étudiant en
                 <strong>informatique</strong> au sein du
@@ -85,7 +94,7 @@
                 <h3>Centre d'intérêts</h3>
                 <ul id="listeCIUl">
                     <li>
-                        <img src="Images/voyage.webp">
+                        <img src="Images/voyage.webp" onclick="ouvrirModalImage(this.src)" style="cursor:zoom-in;">>
                         <div>
                             <h4>Voyager</h4>
                             <p>Le voyage est ma passion principale. J'aime découvrir de nouveaux horizons, rencontrer
@@ -96,7 +105,7 @@
                         </div>
                     </li>
                     <li class="inverse">
-                        <img src="Images/progPHP.webp">
+                        <img src="Images/progPHP.webp" onclick="ouvrirModalImage(this.src)" style="cursor:zoom-in;">>
                         <div>
                             <h4>DÉVELOPPEMENT & PROGRAMMATION</h4>
                             <p>Depuis que j'ai acquis des compétences en HTML, CSS et Python durant mes années de lycée,
@@ -106,7 +115,7 @@
                         </div>
                     </li>
                     <li>
-                        <img src="Images/reseau.webp">
+                        <img src="Images/reseau.webp" onclick="ouvrirModalImage(this.src)" style="cursor:zoom-in;">>
                         <div>
                             <h4>INFRASTRUCTURES RÉSEAUX</h4>
                             <p>Bien que complexe à apprendre en autodidacte, ma passion pour la communication entre
@@ -117,7 +126,7 @@
                         </div>
                     </li>
                     <li class="inverse">
-                        <img src="Images/montage.webp">
+                        <img src="Images/montage.webp" onclick="ouvrirModalImage(this.src)" style="cursor:zoom-in;">>
                         <div>
                             <h4>MONTAGE VIDÉO</h4>
                             <p>Il y a quelques années, je me suis lancé dans le montage vidéo. J'apprécie le côté
@@ -127,7 +136,7 @@
                         </div>
                     </li>
                     <li>
-                        <img src="Images/sensations.webp">
+                        <img src="Images/sensations.webp" onclick="ouvrirModalImage(this.src)" style="cursor:zoom-in;">>
                         <div>
                             <h4>SENSATIONS FORTES</h4>
                             <p>Les sensations fortes me passionnent : elles me procurent une montée d'adrénaline et un
@@ -141,7 +150,13 @@
             </section>
         </section>
 
-
+        <div id="modalImage"
+            style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(10,20,40,0.95); z-index:9999; align-items:center; justify-content:center;">
+            <span onclick="fermerModalImage()"
+                style="position:absolute;top:2vw;right:3vw;font-size:3rem;color:white;cursor:pointer;z-index:10001;">&times;</span>
+            <img id="modalImgContent" src="" alt="Agrandissement"
+                style="max-width:90vw; max-height:85vh; border-radius:1vw; box-shadow:0 0 30px #000;">
+        </div>
 
         <footer>
             <div class="footer-container">
@@ -149,8 +164,11 @@
 
                 <ul class="footer-links">
                     <li><a href="aProposDeMoi.html">À propos</a></li>
-                    <li><a href="#projects">Projets</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="projets.html">Projets</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul class="footer-links">
+                    <li><a href="politiqueDeConfidentialite.html">Politique de confidentialité</a></li>
                 </ul>
                 <ul class="footer-links">
                     <li><a href="https://github.com/GENSSEMatheo" target="_blank">GitHub</a></li>
